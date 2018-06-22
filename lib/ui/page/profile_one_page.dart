@@ -61,15 +61,19 @@ class ProfileOnePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             ProfileTile(
-              title: "1.5 K",
+              title: "1.5K",
               subtitle: "Posts",
             ),
             ProfileTile(
-              title: "25 K",
+              title: "2.5K",
               subtitle: "Followers",
             ),
             ProfileTile(
-              title: "1.2 K",
+              title: "10K",
+              subtitle: "Comments",
+            ),
+            ProfileTile(
+              title: "1.2K",
               subtitle: "Following",
             )
           ],
@@ -154,6 +158,7 @@ class ProfileOnePage extends StatelessWidget {
         appTitle: "View Profile",
         bodyData: bodyData(),
         showFAB: true,
+        showDrawer: false,
       );
 
   @override

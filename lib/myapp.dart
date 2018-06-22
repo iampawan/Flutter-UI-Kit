@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_uikit/ui/page/home_page.dart';
 import 'package:flutter_uikit/ui/page/notfound_page.dart';
 import 'package:flutter_uikit/ui/page/profile_one_page.dart';
+import 'package:flutter_uikit/ui/page/settings_one_page.dart';
 import 'package:flutter_uikit/ui/page/timeline_one_page.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(primaryColor: Colors.pink),
     debugShowCheckedModeBanner: false,
     showPerformanceOverlay: false,
-    home: HomePage(),
+    home: SettingsOnePage(),
     // initialRoute: UIData.notFoundRoute,
 
     //routes
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       UIData.profileOneRoute: (BuildContext context) => ProfileOnePage(),
       UIData.timelineOneRoute: (BuildContext context) => TimelineOnePage(),
       UIData.notFoundRoute: (BuildContext context) => NotFoundPage(),
+      UIData.settingsOneRoute: (BuildContext context) => SettingsOnePage(),
     },
   );
 

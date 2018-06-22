@@ -4,6 +4,7 @@ class UIData {
   static const String profileOneRoute = "/Profile 1";
   static const String notFoundRoute = "/No Item 1";
   static const String timelineOneRoute = "/Timeline 1";
+  static const String settingsOneRoute = "/Settings 1";
 
   //strings
   static const String appName = "Flutter UIKit";

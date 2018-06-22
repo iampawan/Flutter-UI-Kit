@@ -4,12 +4,20 @@ class CommonScaffold extends StatelessWidget {
   final appTitle;
   final Widget bodyData;
   final showFAB;
+  final showDrawer;
+  final backGroundColor;
 
-  CommonScaffold({this.appTitle, this.bodyData, this.showFAB});
+  CommonScaffold(
+      {this.appTitle,
+      this.bodyData,
+      this.showFAB,
+      this.showDrawer = true,
+      this.backGroundColor});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backGroundColor != null ? backGroundColor : null,
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: Text(appTitle),
@@ -27,7 +35,7 @@ class CommonScaffold extends StatelessWidget {
           )
         ],
       ),
-      drawer: Drawer(),
+      drawer: showDrawer == true ? Drawer() : null,
       body: bodyData,
       floatingActionButton: showFAB == true
           ? FloatingActionButton(
