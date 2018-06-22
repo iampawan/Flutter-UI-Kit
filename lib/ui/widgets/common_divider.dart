@@ -4,8 +4,8 @@ class CommonDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Divider(
-      color: Colors.grey.shade800,
-      height: 10.0,
+      color: Colors.grey.shade700,
+      height: 8.0,
     );
   }
 }

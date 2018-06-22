@@ -5,6 +5,7 @@ class Menu {
   IconData icon;
   String image;
   List<String> items;
+  BuildContext context;
 
-  Menu({this.title, this.icon, this.image, this.items});
+  Menu({this.title, this.icon, this.image, this.items, this.context});
 }

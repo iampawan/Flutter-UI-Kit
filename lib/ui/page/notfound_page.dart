@@ -10,10 +10,10 @@ class NotFoundPage extends StatelessWidget {
   final String image;
 
   NotFoundPage(
-      {@required this.appTitle,
-      @required this.title,
-      @required this.message,
-      this.icon,
+      {this.appTitle = "Search",
+      this.title = "No Result",
+      this.message = "Try a more general keyword.",
+      this.icon = Icons.search,
       this.image});
 
   Widget bodyData() => Center(

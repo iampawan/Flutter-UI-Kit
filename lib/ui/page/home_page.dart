@@ -139,15 +139,18 @@ class HomePage extends StatelessWidget {
                 shrinkWrap: true,
                 itemCount: menu.items.length,
                 itemBuilder: (context, i) => new ListTile(
-                      leading: Icon(
-                        menu.icon,
-                        color: Colors.black,
-                      ),
-                      title: Text(
-                        menu.items[i],
-                        style: TextStyle(color: Colors.black),
-                      ),
+                    leading: Icon(
+                      menu.icon,
+                      color: Colors.black,
                     ),
+                    title: Text(
+                      menu.items[i],
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, "/${menu.items[i]}");
+                    }),
               ),
             ));
   }

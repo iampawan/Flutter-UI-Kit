@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(primaryColor: Colors.pink),
     debugShowCheckedModeBanner: false,
     showPerformanceOverlay: false,
-    home: TimelineOnePage(),
+    home: HomePage(),
     // initialRoute: UIData.notFoundRoute,
 
     //routes
@@ -18,12 +18,7 @@ class MyApp extends StatelessWidget {
       UIData.homeRoute: (BuildContext context) => HomePage(),
       UIData.profileOneRoute: (BuildContext context) => ProfileOnePage(),
       UIData.timelineOneRoute: (BuildContext context) => TimelineOnePage(),
-      UIData.notFoundRoute: (BuildContext context) => NotFoundPage(
-            appTitle: "Search",
-            title: "No Result",
-            message: "Try a more general keyword.",
-            icon: Icons.search,
-          ),
+      UIData.notFoundRoute: (BuildContext context) => NotFoundPage(),
     },
   );
 

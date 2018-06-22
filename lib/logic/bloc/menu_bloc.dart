@@ -6,6 +6,7 @@ import 'package:flutter_uikit/model/menu.dart';
 class MenuBloc {
   final _menuVM = MenuViewModel();
   final menuController = StreamController<List<Menu>>();
+
   Stream<List<Menu>> get menuItems => menuController.stream;
 
   MenuBloc() {
