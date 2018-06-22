@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_uikit/logic/bloc/menu_bloc.dart';
-import 'package:flutter_uikit/logic/viewmodel/menu_view_model.dart';
+import 'package:flutter_uikit/model/menu.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
 
 class HomePage extends StatelessWidget {
+  final _scaffoldState = GlobalKey<ScaffoldState>();
   //menuStack
-  Widget menuStack(Menu menu) => InkWell(
-        onTap: () {},
+  Widget menuStack(BuildContext context, Menu menu) => InkWell(
+        onTap: () => _showModalBottomSheet(context, menu),
         splashColor: Colors.orange,
         child: Card(
           elevation: 5.0,
@@ -53,7 +54,7 @@ class HomePage extends StatelessWidget {
           ),
           Text(
             menu.title,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
           )
         ],
       );
@@ -63,11 +64,15 @@ class HomePage extends StatelessWidget {
     return StreamBuilder<List<Menu>>(
       stream: menuBloc.menuItems,
       builder: (context, snapshot) => snapshot.hasData
-          ? GridView.count(
-              crossAxisCount: 2,
-              childAspectRatio: 1.0,
-              children:
-                  snapshot.data.map((Menu menu) => menuStack(menu)).toList(),
+          ? Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: GridView.count(
+                crossAxisCount: 2,
+                childAspectRatio: 1.0,
+                children: snapshot.data
+                    .map((Menu menu) => menuStack(context, menu))
+                    .toList(),
+              ),
             )
           : Center(
               child: CircularProgressIndicator(),
@@ -75,15 +80,47 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget homeScaffold() => Scaffold(
-      appBar: AppBar(
-        title: Text(UIData.appName),
-        backgroundColor: Colors.black,
-      ),
-      body: bodyList());
+  Widget homeScaffold(BuildContext context) => Theme(
+        data: Theme.of(context).copyWith(
+              canvasColor: Colors.transparent,
+            ),
+        child: Scaffold(
+            key: _scaffoldState,
+            appBar: AppBar(
+              title: Text(UIData.appName),
+              backgroundColor: Colors.black,
+            ),
+            body: bodyList()),
+      );
+
+  void _showModalBottomSheet(BuildContext context, Menu menu) {
+    showModalBottomSheet(
+        context: context,
+        builder: (context) => Material(
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.only(
+                      topLeft: new Radius.circular(12.0),
+                      topRight: new Radius.circular(12.0))),
+              child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: menu.items.length,
+                itemBuilder: (context, i) => new ListTile(
+                      leading: Icon(
+                        menu.icon,
+                        color: Colors.black,
+                      ),
+                      title: Text(
+                        menu.items[i],
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+              ),
+            ));
+  }
 
   @override
   Widget build(BuildContext context) {
-    return homeScaffold();
+    return homeScaffold(context);
   }
 }
