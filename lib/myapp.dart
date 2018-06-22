@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_uikit/ui/page/home_page.dart';
+import 'package:flutter_uikit/ui/page/login/login_page.dart';
 import 'package:flutter_uikit/ui/page/notfound/notfound_page.dart';
 import 'package:flutter_uikit/ui/page/profile/profile_one_page.dart';
 import 'package:flutter_uikit/ui/page/settings/settings_one_page.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
       UIData.notFoundRoute: (BuildContext context) => NotFoundPage(),
       UIData.settingsOneRoute: (BuildContext context) => SettingsOnePage(),
       UIData.shoppingOneRoute: (BuildContext context) => ShoppingOnePage(),
+      UIData.loginOneRoute: (BuildContext context) => LoginPage(),
     },
   );
 

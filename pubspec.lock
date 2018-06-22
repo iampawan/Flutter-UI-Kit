@@ -256,6 +256,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.0.3"
+  rxdart:
+    dependency: "direct main"
+    description:
+      name: rxdart
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.18.0"
   shelf:
     dependency: transitive
     description:

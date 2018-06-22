@@ -70,10 +70,7 @@ class HomePage extends StatelessWidget {
           centerTitle: false,
           background: Container(
             decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [
-              Colors.blueGrey.shade800,
-              Colors.black87,
-            ])),
+                gradient: LinearGradient(colors: UIData.kitGradients)),
           ),
           title: Row(
             children: <Widget>[
