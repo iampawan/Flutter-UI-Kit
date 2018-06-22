@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_uikit/logic/bloc/product_bloc.dart';
 import 'package:flutter_uikit/model/product.dart';
 import 'package:flutter_uikit/ui/widgets/common_scaffold.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ShoppingOnePage extends StatelessWidget {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
   //stack1
   Widget imageStack(String img) => Image.network(
         img,
@@ -80,10 +81,9 @@ class ShoppingOnePage extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: InkWell(
                     splashColor: Colors.yellow,
-                    onTap: () {},
+                    onDoubleTap: () => showSnackBar(),
                     child: Material(
                       elevation: 2.0,
-                      color: Colors.yellow,
                       child: Stack(
                         fit: StackFit.expand,
                         children: <Widget>[
@@ -109,13 +109,26 @@ class ShoppingOnePage extends StatelessWidget {
         });
   }
 
+  void showSnackBar() {
+    scaffoldKey.currentState.showSnackBar(SnackBar(
+      content: Text(
+        "Added to cart.",
+      ),
+      action: SnackBarAction(
+        label: "Undo",
+        onPressed: () {},
+      ),
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return CommonScaffold(
+      scaffoldKey: scaffoldKey,
       appTitle: "Products",
       showDrawer: true,
       showFAB: false,
-      actionFirstIcon:Icons.shopping_cart,
+      actionFirstIcon: Icons.shopping_cart,
       bodyData: bodyData(),
     );
   }

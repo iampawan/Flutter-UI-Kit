@@ -7,6 +7,7 @@ class CommonScaffold extends StatelessWidget {
   final showDrawer;
   final backGroundColor;
   final actionFirstIcon;
+  final scaffoldKey;
 
   CommonScaffold(
       {this.appTitle,
@@ -14,11 +15,13 @@ class CommonScaffold extends StatelessWidget {
       this.showFAB,
       this.showDrawer = false,
       this.backGroundColor,
-      this.actionFirstIcon = Icons.search});
+      this.actionFirstIcon = Icons.search,
+      this.scaffoldKey});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey != null ? scaffoldKey : null,
       backgroundColor: backGroundColor != null ? backGroundColor : null,
       appBar: AppBar(
         backgroundColor: Colors.black,

@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     theme: ThemeData(primaryColor: Colors.pink),
     debugShowCheckedModeBanner: false,
     showPerformanceOverlay: false,
-    home: ShoppingOnePage(),
+    home: HomePage(),
     // initialRoute: UIData.notFoundRoute,
 
     //routes
