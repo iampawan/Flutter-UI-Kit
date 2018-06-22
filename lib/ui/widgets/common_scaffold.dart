@@ -6,13 +6,15 @@ class CommonScaffold extends StatelessWidget {
   final showFAB;
   final showDrawer;
   final backGroundColor;
+  final actionFirstIcon;
 
   CommonScaffold(
       {this.appTitle,
       this.bodyData,
       this.showFAB,
-      this.showDrawer = true,
-      this.backGroundColor});
+      this.showDrawer = false,
+      this.backGroundColor,
+      this.actionFirstIcon = Icons.search});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class CommonScaffold extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.search),
+            icon: Icon(actionFirstIcon),
           ),
           IconButton(
             onPressed: () {},

@@ -37,6 +37,7 @@ class NotFoundPage extends StatelessWidget {
     return CommonScaffold(
       appTitle: appTitle,
       bodyData: bodyData(),
+      showDrawer: false,
       showFAB: false,
     );
   }
