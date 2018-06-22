@@ -59,39 +59,74 @@ class HomePage extends StatelessWidget {
         ],
       );
 
-  Widget bodyList() {
-    MenuBloc menuBloc = MenuBloc();
-    return StreamBuilder<List<Menu>>(
-      stream: menuBloc.menuItems,
-      builder: (context, snapshot) => snapshot.hasData
-          ? Padding(
-              padding: const EdgeInsets.all(4.0),
-              child: GridView.count(
-                crossAxisCount: 2,
-                childAspectRatio: 1.0,
-                children: snapshot.data
-                    .map((Menu menu) => menuStack(context, menu))
-                    .toList(),
-              ),
-            )
-          : Center(
-              child: CircularProgressIndicator(),
+  //appbar
+  Widget appBar() {
+    return SliverAppBar(
+      backgroundColor: Colors.black,
+      pinned: true,
+      elevation: 10.0,
+      forceElevated: true,
+      expandedHeight: 150.0,
+      flexibleSpace: FlexibleSpaceBar(
+        centerTitle: false,
+        background: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+            Colors.blueGrey.shade800,
+            Colors.black87,
+          ])),
+        ),
+        title: Row(
+          children: <Widget>[
+            FlutterLogo(
+              colors: Colors.yellow,
+              textColor: Colors.white,
             ),
+            SizedBox(
+              width: 10.0,
+            ),
+            Text(UIData.appName)
+          ],
+        ),
+      ),
     );
   }
+
+  //bodygrid
+  Widget bodyGrid(List<Menu> menu) => SliverGrid(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          mainAxisSpacing: 0.0,
+          crossAxisSpacing: 0.0,
+          childAspectRatio: 1.0,
+        ),
+        delegate: SliverChildBuilderDelegate((BuildContext context, int index) {
+          return menuStack(context, menu[index]);
+        }, childCount: menu.length),
+      );
 
   Widget homeScaffold(BuildContext context) => Theme(
         data: Theme.of(context).copyWith(
               canvasColor: Colors.transparent,
             ),
-        child: Scaffold(
-            key: _scaffoldState,
-            appBar: AppBar(
-              title: Text(UIData.appName),
-              backgroundColor: Colors.black,
-            ),
-            body: bodyList()),
+        child: Scaffold(key: _scaffoldState, body: bodySliverList()),
       );
+
+  Widget bodySliverList() {
+    MenuBloc menuBloc = MenuBloc();
+    return StreamBuilder<List<Menu>>(
+        stream: menuBloc.menuItems,
+        builder: (context, snapshot) {
+          return snapshot.hasData
+              ? CustomScrollView(
+                  slivers: <Widget>[
+                    appBar(),
+                    bodyGrid(snapshot.data),
+                  ],
+                )
+              : Center(child: CircularProgressIndicator());
+        });
+  }
 
   void _showModalBottomSheet(BuildContext context, Menu menu) {
     showModalBottomSheet(
