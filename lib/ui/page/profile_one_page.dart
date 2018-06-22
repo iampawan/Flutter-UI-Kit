@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_uikit/ui/widgets/common_scaffold.dart';
 import 'package:flutter_uikit/ui/widgets/profile_tile.dart';
 import 'package:random_pk/random_pk.dart';
 
@@ -152,31 +153,10 @@ class ProfileOnePage extends StatelessWidget {
     );
   }
 
-  Widget _scaffold() => Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Text("View profile"),
-          actions: <Widget>[
-            SizedBox(
-              width: 5.0,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.search),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.more_vert),
-            )
-          ],
-        ),
-        drawer: Drawer(),
-        body: bodyData(),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.person_add),
-          backgroundColor: Colors.black,
-        ),
+  Widget _scaffold() => CommonScaffold(
+        appTitle: "View Profile",
+        bodyData: bodyData(),
+        showFAB: true,
       );
 
   @override
