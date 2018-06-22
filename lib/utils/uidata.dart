@@ -1,6 +1,7 @@
 class UIData {
   //routes
   static const String homeRoute = "/home";
+  static const String profileOneRoute = "/profile/1";
 
   //strings
   static const String appName = "Flutter UIKit";

@@ -60,37 +60,35 @@ class HomePage extends StatelessWidget {
       );
 
   //appbar
-  Widget appBar() {
-    return SliverAppBar(
-      backgroundColor: Colors.black,
-      pinned: true,
-      elevation: 10.0,
-      forceElevated: true,
-      expandedHeight: 150.0,
-      flexibleSpace: FlexibleSpaceBar(
-        centerTitle: false,
-        background: Container(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [
-            Colors.blueGrey.shade800,
-            Colors.black87,
-          ])),
+  Widget appBar() => SliverAppBar(
+        backgroundColor: Colors.black,
+        pinned: true,
+        elevation: 10.0,
+        forceElevated: true,
+        expandedHeight: 150.0,
+        flexibleSpace: FlexibleSpaceBar(
+          centerTitle: false,
+          background: Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [
+              Colors.blueGrey.shade800,
+              Colors.black87,
+            ])),
+          ),
+          title: Row(
+            children: <Widget>[
+              FlutterLogo(
+                colors: Colors.yellow,
+                textColor: Colors.white,
+              ),
+              SizedBox(
+                width: 10.0,
+              ),
+              Text(UIData.appName)
+            ],
+          ),
         ),
-        title: Row(
-          children: <Widget>[
-            FlutterLogo(
-              colors: Colors.yellow,
-              textColor: Colors.white,
-            ),
-            SizedBox(
-              width: 10.0,
-            ),
-            Text(UIData.appName)
-          ],
-        ),
-      ),
-    );
-  }
+      );
 
   //bodygrid
   Widget bodyGrid(List<Menu> menu) => SliverGrid(

@@ -28,7 +28,7 @@ class MenuViewModel {
           title: "Timeline",
           icon: Icons.timeline,
           image: UIData.timelineImage,
-          items: ["Timeline 1, Timeline 2"]),
+          items: ["Timeline 1", "Timeline 2"]),
       Menu(
           title: "Dashboard",
           icon: Icons.dashboard,
