@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_uikit/ui/widgets/common_divider.dart';
 import 'package:flutter_uikit/ui/widgets/common_scaffold.dart';
 import 'package:flutter_uikit/ui/widgets/profile_tile.dart';
-import 'package:random_pk/random_pk.dart';
 
 class ProfileOnePage extends StatelessWidget {
   var deviceSize;
@@ -133,20 +133,17 @@ class ProfileOnePage extends StatelessWidget {
           ],
         ),
       );
-  Widget divider() => Divider(
-        color: Colors.grey.shade800,
-        height: 10.0,
-      );
+
   Widget bodyData() {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
           profileColumn(),
-          divider(),
+          CommonDivider(),
           followColumn(),
-          divider(),
+          CommonDivider(),
           descColumn(),
-          divider(),
+          CommonDivider(),
           accountColumn()
         ],
       ),
