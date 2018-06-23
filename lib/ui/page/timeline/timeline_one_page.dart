@@ -3,6 +3,7 @@ import 'package:flutter_uikit/logic/bloc/post_bloc.dart';
 import 'package:flutter_uikit/model/post.dart';
 import 'package:flutter_uikit/ui/widgets/common_divider.dart';
 import 'package:flutter_uikit/ui/widgets/label_icon.dart';
+import 'package:flutter_uikit/utils/uidata.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TimelineOnePage extends StatelessWidget {
@@ -22,11 +23,19 @@ class TimelineOnePage extends StatelessWidget {
               children: <Widget>[
                 Text(
                   post.personName,
-                  style: Theme.of(context).textTheme.body1,
+                  style: Theme
+                      .of(context)
+                      .textTheme
+                      .body1
+                      .apply(fontWeightDelta: 700),
+                ),
+                SizedBox(
+                  height: 5.0,
                 ),
                 Text(
                   post.address,
-                  style: Theme.of(context).textTheme.caption,
+                  style: Theme.of(context).textTheme.caption.apply(
+                      fontFamily: UIData.ralewayFont, color: Colors.pink),
                 )
               ],
             ),
@@ -48,7 +57,10 @@ class TimelineOnePage extends StatelessWidget {
             icon: FontAwesomeIcons.comment,
             iconColor: Colors.blue,
           ),
-          Text(post.postTime)
+          Text(
+            post.postTime,
+            style: TextStyle(fontFamily: UIData.ralewayFont),
+          )
         ],
       );
 
@@ -64,7 +76,12 @@ class TimelineOnePage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(post.message),
+            child: Text(
+              post.message,
+              style: TextStyle(
+                  fontWeight: FontWeight.normal,
+                  fontFamily: UIData.ralewayFont),
+            ),
           ),
           SizedBox(
             height: 10.0,

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_uikit/services/network_service_response.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
 
-
 fetchApiResult(BuildContext context, NetworkServiceResponse snapshot) {
   showDialog(
     context: context,
@@ -24,7 +23,9 @@ showProgress(BuildContext context) {
       context: context,
       barrierDismissible: false,
       builder: (context) => Center(
-            child: CircularProgressIndicator(),
+            child: CircularProgressIndicator(
+              backgroundColor: Colors.yellow,
+            ),
           ));
 }
 

@@ -45,7 +45,10 @@ class CommonScaffold extends StatelessWidget {
       floatingActionButton: showFAB == true
           ? FloatingActionButton(
               onPressed: () {},
-              child: Icon(Icons.person_add),
+              child: Icon(
+                Icons.person_add,
+                color: Colors.white,
+              ),
               backgroundColor: Colors.black,
             )
           : null,

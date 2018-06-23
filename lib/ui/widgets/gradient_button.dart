@@ -15,7 +15,7 @@ class GradientButton extends StatelessWidget {
       shape: const StadiumBorder(),
       child: InkWell(
         onTap: onPressed,
-        splashColor: Colors.blue,
+        splashColor: Colors.yellow,
         child: Ink(
           height: 50.0,
           decoration: BoxDecoration(

@@ -11,7 +11,10 @@ import 'package:flutter_uikit/utils/uidata.dart';
 
 class MyApp extends StatelessWidget {
   final materialApp = MaterialApp(
-    theme: ThemeData(primaryColor: Colors.pink),
+    theme: ThemeData(
+        primaryColor: Colors.black,
+        fontFamily: UIData.quickFont,
+        primarySwatch: Colors.yellow),
     debugShowCheckedModeBanner: false,
     showPerformanceOverlay: false,
     home: HomePage(),

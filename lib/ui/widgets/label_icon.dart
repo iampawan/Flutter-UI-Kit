@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_uikit/utils/uidata.dart';
 
 class LabelIcon extends StatelessWidget {
   final label;
@@ -21,7 +22,10 @@ class LabelIcon extends StatelessWidget {
           SizedBox(
             width: 5.0,
           ),
-          Text(label)
+          Text(
+            label,
+            style: TextStyle(fontFamily: UIData.ralewayFont),
+          )
         ],
       ),
     );

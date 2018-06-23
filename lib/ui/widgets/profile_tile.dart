@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_uikit/utils/uidata.dart';
 
 class ProfileTile extends StatelessWidget {
   final title;
@@ -13,7 +14,10 @@ class ProfileTile extends StatelessWidget {
         Text(
           title,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.w700,
+          ),
         ),
         SizedBox(
           height: 5.0,

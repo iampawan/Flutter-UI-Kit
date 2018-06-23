@@ -87,8 +87,10 @@ class ProfileOnePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 50.0),
             child: Text(
               "Google Developer Expert for Flutter. Passionate #Flutter, #Android Developer. #Entrepreneur #YouTuber",
+              style: TextStyle(fontWeight: FontWeight.w700),
               textAlign: TextAlign.center,
               maxLines: 3,
+              
               softWrap: true,
             ),
           ),
