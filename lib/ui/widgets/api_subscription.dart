@@ -15,7 +15,7 @@ apiSubscription(Stream<FetchProcess> apiResult, BuildContext context) {
       } else {
         switch (p.type) {
           case ApiType.performLogin:
-            // afterLogin(p, context);
+            showSuccess(context);
             break;
           case ApiType.getProductInfo:
             break;

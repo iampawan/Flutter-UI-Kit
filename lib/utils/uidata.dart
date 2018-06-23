@@ -45,6 +45,7 @@ class UIData {
 
   //gneric
   static const String error = "Error";
+  static const String success = "Success";
   static const String ok = "OK";
   static const String forgot_password = "Forgot Password?";
   static const String something_went_wrong = "Something went wrong";

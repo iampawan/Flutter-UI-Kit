@@ -115,7 +115,8 @@ class TimelineOnePage extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "All Posts",
-                    style: TextStyle(color: Colors.black),
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.w700),
                   ),
                   Icon(Icons.arrow_drop_down)
                 ],
