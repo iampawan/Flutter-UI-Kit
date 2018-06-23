@@ -18,7 +18,7 @@ class MenuViewModel {
           title: "Shopping",
           icon: Icons.shopping_cart,
           image: UIData.shoppingImage,
-          items: ["Shopping 1", "Shopping 2"]),
+          items: ["Shopping 1", "Shopping 2", "Shopping 3"]),
       Menu(
           title: "Login",
           icon: Icons.send,

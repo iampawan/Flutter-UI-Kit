@@ -19,6 +19,7 @@ dependencies:
   random_pk:
   font_awesome_flutter:
   rxdart:
+  intl:
 
 dev_dependencies:
   flutter_test:

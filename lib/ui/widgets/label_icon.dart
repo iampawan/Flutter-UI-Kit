@@ -24,7 +24,7 @@ class LabelIcon extends StatelessWidget {
           ),
           Text(
             label,
-            style: TextStyle(fontFamily: UIData.ralewayFont),
+            style: TextStyle(fontWeight: FontWeight.w700),
           )
         ],
       ),

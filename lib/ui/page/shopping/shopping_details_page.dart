@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_uikit/inherited/product_provider.dart';
 import 'package:flutter_uikit/logic/bloc/product_bloc.dart';
 import 'package:flutter_uikit/model/product.dart';
-import 'package:flutter_uikit/ui/page/shopping/shopping_widget.dart';
+import 'package:flutter_uikit/ui/page/shopping/shopping_details/shopping_widget.dart';
 import 'package:flutter_uikit/ui/widgets/common_scaffold.dart';
 import 'package:flutter_uikit/ui/widgets/login_background.dart';
 
-class ShoppingDetails extends StatelessWidget {
+class ShoppingDetailsPage extends StatelessWidget {
   final _scaffoldState = GlobalKey<ScaffoldState>();
 
   Widget bodyData(Stream<List<Product>> products) =>

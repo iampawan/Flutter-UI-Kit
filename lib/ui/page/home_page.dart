@@ -142,7 +142,7 @@ class HomePage extends StatelessWidget {
                     ),
                     title: Text(
                       menu.items[i],
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(fontWeight: FontWeight.w700),
                     ),
                     onTap: () {
                       Navigator.pop(context);
