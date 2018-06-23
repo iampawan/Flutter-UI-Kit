@@ -20,6 +20,7 @@ dependencies:
   font_awesome_flutter:
   rxdart:
   intl:
+  flutter_masked_text:
 
 dev_dependencies:
   flutter_test:
