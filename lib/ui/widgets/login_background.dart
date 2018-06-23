@@ -4,7 +4,8 @@ import 'package:flutter_uikit/utils/uidata.dart';
 
 class LoginBackground extends StatelessWidget {
   final showIcon;
-  LoginBackground({this.showIcon = true});
+  final image;
+  LoginBackground({this.showIcon = true, this.image});
 
   Widget topHalf(BuildContext context) {
     var deviceSize = MediaQuery.of(context).size;
@@ -29,7 +30,14 @@ class LoginBackground extends StatelessWidget {
                           colors: Colors.yellow,
                         )),
                   )
-                : new Container()
+                : new Container(
+                    width: double.infinity,
+                    child: image != null
+                        ? Image.network(
+                            image,
+                            fit: BoxFit.cover,
+                          )
+                        : new Container())
           ],
         ),
       ),

@@ -9,11 +9,10 @@ class ProfileTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         Text(
           title,
-          textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 20.0,
             fontWeight: FontWeight.w700,
@@ -24,7 +23,6 @@ class ProfileTile extends StatelessWidget {
         ),
         Text(
           subtitle,
-          textAlign: TextAlign.center,
           style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.normal),
         ),
       ],

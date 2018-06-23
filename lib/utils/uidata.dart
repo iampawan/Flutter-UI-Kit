@@ -10,6 +10,7 @@ class UIData {
   static const String timelineOneRoute = "/Timeline 1";
   static const String settingsOneRoute = "/Settings 1";
   static const String shoppingOneRoute = "/Shopping 1";
+  static const String shoppingTwoRoute = "/Shopping 2";
   static const String loginOneRoute = "/Login 1";
 
   //strings

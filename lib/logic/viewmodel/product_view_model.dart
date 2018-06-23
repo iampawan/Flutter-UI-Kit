@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_uikit/model/product.dart';
 
 class ProductViewModel {
+  
   List<Product> productsItems;
 
   ProductViewModel({this.productsItems});
@@ -14,6 +16,26 @@ class ProductViewModel {
             name: "THE PERFECT",
             price: "£19.99",
             rating: 4.0,
+            colors: [
+              ProductColor(
+                color: Colors.red,
+                colorName: "Red",
+              ),
+              ProductColor(
+                color: Colors.green,
+                colorName: "Green",
+              ),
+              ProductColor(
+                color: Colors.blue,
+                colorName: "Blue",
+              ),
+              ProductColor(
+                color: Colors.cyan,
+                colorName: "Cyan",
+              )
+            ],
+            quantity: 0,
+            sizes: ["S", "M", "L", "XL"],
             totalReviews: 170),
         Product(
             brand: "adidas Performance",
