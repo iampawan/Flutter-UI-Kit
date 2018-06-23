@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.yellow),
     debugShowCheckedModeBanner: false,
     showPerformanceOverlay: false,
-    home: ShoppingDetails(),
+    home: HomePage(),
     // initialRoute: UIData.notFoundRoute,
 
     //routes

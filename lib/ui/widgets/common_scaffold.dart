@@ -109,13 +109,14 @@ class CommonScaffold extends StatelessWidget {
                       "5",
                       style: TextStyle(color: Colors.white, fontSize: 10.0),
                     )
-                  : Null,
+                  : null,
               icon: floatingIcon,
               qrCallback: () {},
             )
           : null,
-      floatingActionButtonLocation:
-          centerDocked ? FloatingActionButtonLocation.centerDocked : null,
+      floatingActionButtonLocation: centerDocked
+          ? FloatingActionButtonLocation.centerDocked
+          : FloatingActionButtonLocation.endFloat,
       bottomNavigationBar: showBottomNav ? myBottomBar() : null,
     );
   }

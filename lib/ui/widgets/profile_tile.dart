@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_uikit/utils/uidata.dart';
 
 class ProfileTile extends StatelessWidget {
   final title;
@@ -9,7 +8,6 @@ class ProfileTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         Text(
           title,

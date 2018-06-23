@@ -39,7 +39,7 @@ class _LoginCardState extends State<LoginCard>
                       style: new TextStyle(fontSize: 15.0, color: Colors.black),
                       decoration: new InputDecoration(
                           hintText: UIData.enter_code_hint,
-                          labelText: UIData.enter_code_hint),
+                          labelText: UIData.enter_code_label),
                     ),
                     new SizedBox(
                       height: 10.0,
@@ -53,7 +53,7 @@ class _LoginCardState extends State<LoginCard>
                                 fontSize: 15.0, color: Colors.black),
                             decoration: new InputDecoration(
                                 hintText: UIData.enter_otp_hint,
-                                labelText: UIData.enter_otp_hint),
+                                labelText: UIData.enter_otp_label),
                             obscureText: true,
                           ),
                     new SizedBox(
@@ -96,9 +96,7 @@ class _LoginCardState extends State<LoginCard>
         height: deviceSize.height / 2 - 20,
         width: deviceSize.width * 0.85,
         child: new Card(
-            color: Colors.white,
-            elevation: 2.0,
-            child: loginBuilder()),
+            color: Colors.white, elevation: 2.0, child: loginBuilder()),
       ),
     );
   }

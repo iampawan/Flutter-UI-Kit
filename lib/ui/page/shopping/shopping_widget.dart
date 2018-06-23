@@ -81,14 +81,31 @@ class ShoppingWidgets extends StatelessWidget {
         ),
       );
 
-  Widget descCard() => Padding(
+  Widget descCard() => Container(
+        width: double.infinity,
         padding: const EdgeInsets.symmetric(horizontal: 18.0),
         child: Card(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: ProfileTile(
-              title: "Description",
-              subtitle: product.description,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  "Description",
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                SizedBox(
+                  height: 5.0,
+                ),
+                Text(
+                  product.description,
+                  style:
+                      TextStyle(fontSize: 15.0, fontWeight: FontWeight.normal),
+                ),
+              ],
             ),
           ),
         ),

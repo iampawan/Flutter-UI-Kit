@@ -90,7 +90,6 @@ class ProfileOnePage extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.w700),
               textAlign: TextAlign.center,
               maxLines: 3,
-              
               softWrap: true,
             ),
           ),
@@ -161,6 +160,7 @@ class ProfileOnePage extends StatelessWidget {
         bodyData: bodyData(),
         showFAB: true,
         showDrawer: false,
+        floatingIcon: Icons.person_add,
       );
 
   @override

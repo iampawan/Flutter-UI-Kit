@@ -36,8 +36,10 @@ class UIData {
   static const String verifyImage = "$imageDir/verification.jpg";
 
   //login
-  static const String enter_code_hint = "Phone Number";
-  static const String enter_otp_hint = "OTP";
+  static const String enter_code_label = "Phone Number";
+  static const String enter_code_hint = "10 Digit Phone Number";
+  static const String enter_otp_label = "OTP";
+  static const String enter_otp_hint = "4 Digit OTP";
   static const String get_otp = "Get OTP";
   static const String resend_otp = "Resend OTP";
   static const String login = "Login";
