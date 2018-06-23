@@ -16,7 +16,7 @@ class ShoppingAction extends StatefulWidget {
 }
 
 class ShoppingActionState extends State<ShoppingAction> {
-  String _value = "Red";
+  String _value = "Cyan";
   String _sizeValue = "M";
 
   Widget colorsCard() => Column(

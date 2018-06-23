@@ -39,7 +39,8 @@ class _LoginCardState extends State<LoginCard>
                       style: new TextStyle(fontSize: 15.0, color: Colors.black),
                       decoration: new InputDecoration(
                           hintText: UIData.enter_code_hint,
-                          labelText: UIData.enter_code_label),
+                          labelText: UIData.enter_code_label,
+                          labelStyle: TextStyle(fontWeight: FontWeight.w700)),
                     ),
                     new SizedBox(
                       height: 10.0,
@@ -53,7 +54,9 @@ class _LoginCardState extends State<LoginCard>
                                 fontSize: 15.0, color: Colors.black),
                             decoration: new InputDecoration(
                                 hintText: UIData.enter_otp_hint,
-                                labelText: UIData.enter_otp_label),
+                                labelText: UIData.enter_otp_label,
+                                labelStyle:
+                                    TextStyle(fontWeight: FontWeight.w700)),
                             obscureText: true,
                           ),
                     new SizedBox(
