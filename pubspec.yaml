@@ -58,11 +58,11 @@ flutter:
   fonts:
     - family: Quicksand
       fonts:
-        - asset: assets/fonts/Quicksand_Book.otf
+        - asset: assets/fonts/Quicksand-Medium.ttf
           style: normal
         - asset: assets/fonts/Quicksand_Bold.otf
           weight: 700
-        - asset: assets/fonts/Quicksand_Light.otf
+        
          
     - family: Raleway
       fonts:

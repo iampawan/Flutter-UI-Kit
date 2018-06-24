@@ -17,13 +17,14 @@ import 'package:flutter_uikit/utils/uidata.dart';
 
 class MyApp extends StatelessWidget {
   final materialApp = MaterialApp(
+    title: UIData.appName,
     theme: ThemeData(
         primaryColor: Colors.black,
         fontFamily: UIData.quickFont,
-        primarySwatch: Colors.yellow),
+        primarySwatch: Colors.amber),
     debugShowCheckedModeBanner: false,
     showPerformanceOverlay: false,
-    home: HomePage(),
+    home: TimelineTwoPage(),
     // initialRoute: UIData.notFoundRoute,
 
     //routes

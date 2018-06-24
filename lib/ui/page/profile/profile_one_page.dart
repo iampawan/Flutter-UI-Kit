@@ -159,7 +159,7 @@ class ProfileOnePage extends StatelessWidget {
         appTitle: "View Profile",
         bodyData: bodyData(),
         showFAB: true,
-        showDrawer: false,
+        showDrawer: true,
         floatingIcon: Icons.person_add,
       );
 

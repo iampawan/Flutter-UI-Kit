@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_uikit/ui/widgets/common_drawer.dart';
 import 'package:flutter_uikit/ui/widgets/custom_float.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
 
@@ -100,7 +101,7 @@ class CommonScaffold extends StatelessWidget {
           )
         ],
       ),
-      drawer: showDrawer ? Drawer() : null,
+      drawer: showDrawer ? CommonDrawer() : null,
       body: bodyData,
       floatingActionButton: showFAB
           ? CustomFloat(
