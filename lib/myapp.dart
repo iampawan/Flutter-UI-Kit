@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_uikit/ui/page/dashboard/dashboard_one.page.dart';
 import 'package:flutter_uikit/ui/page/home_page.dart';
 import 'package:flutter_uikit/ui/page/login/login_page.dart';
 import 'package:flutter_uikit/ui/page/notfound/notfound_page.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.yellow),
     debugShowCheckedModeBanner: false,
     showPerformanceOverlay: false,
-    home: HomePage(),
+    home: DashboardOnePage(),
     // initialRoute: UIData.notFoundRoute,
 
     //routes
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
       UIData.shoppingThreeRoute: (BuildContext context) => ProductDetailPage(),
       UIData.loginOneRoute: (BuildContext context) => LoginPage(),
       UIData.paymentOneRoute: (BuildContext context) => CreditCardPage(),
+      UIData.dashboardOneRoute: (BuildContext context) => DashboardOnePage(),
     },
   );
 
