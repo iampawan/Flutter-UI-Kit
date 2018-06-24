@@ -135,8 +135,7 @@ class HomePage extends StatelessWidget {
             children: <Widget>[
               CircleAvatar(
                 radius: 25.0,
-                backgroundImage: NetworkImage(
-                    "https://avatars0.githubusercontent.com/u/12619420?s=460&v=4"),
+                backgroundImage: AssetImage(UIData.pkImage),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -166,7 +165,7 @@ class HomePage extends StatelessWidget {
                 header(),
                 Expanded(
                   child: ListView.builder(
-                    shrinkWrap: false,
+                    shrinkWrap: true,
                     itemCount: menu.items.length,
                     itemBuilder: (context, i) => Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 10.0),

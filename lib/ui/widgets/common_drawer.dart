@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_uikit/ui/widgets/about_tile.dart';
+import 'package:flutter_uikit/utils/uidata.dart';
 
 class CommonDrawer extends StatelessWidget {
   @override
@@ -16,8 +17,7 @@ class CommonDrawer extends StatelessWidget {
               "mtechviral@gmail.com",
             ),
             currentAccountPicture: new CircleAvatar(
-              backgroundImage: new NetworkImage(
-                  "https://avatars0.githubusercontent.com/u/12619420?s=460&v=4"),
+              backgroundImage: new AssetImage(UIData.pkImage),
             ),
           ),
           new ListTile(

@@ -21,7 +21,6 @@ dependencies:
   flutter_masked_text:
 
 dev_dependencies:
-  random_pk:
   flutter_test:
     sdk: flutter
 
