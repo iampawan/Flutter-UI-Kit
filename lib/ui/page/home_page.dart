@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_uikit/logic/bloc/menu_bloc.dart';
 import 'package:flutter_uikit/model/menu.dart';
+import 'package:flutter_uikit/ui/widgets/common_dialogs.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatelessWidget {
   final _scaffoldState = GlobalKey<ScaffoldState>();
@@ -138,7 +140,7 @@ class HomePage extends StatelessWidget {
                 itemBuilder: (context, i) => new ListTile(
                     leading: Icon(
                       menu.icon,
-                      color: Colors.black,
+                      color: UIData.next(),
                     ),
                     title: Text(
                       menu.items[i],

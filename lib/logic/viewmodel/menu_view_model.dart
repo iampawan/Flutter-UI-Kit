@@ -13,42 +13,47 @@ class MenuViewModel {
           title: "Profile",
           icon: Icons.person,
           image: UIData.profileImage,
-          items: ["Profile 1", "Profile 2"]),
+          items: ["View Profile", "Profile 2", "Profile 3", "Profile 4"]),
       Menu(
           title: "Shopping",
           icon: Icons.shopping_cart,
           image: UIData.shoppingImage,
-          items: ["Shopping 1", "Shopping 2", "Shopping 3"]),
+          items: [
+            "Shopping List",
+            "Shopping Details",
+            "Product Details",
+            "Shopping 4"
+          ]),
       Menu(
           title: "Login",
           icon: Icons.send,
           image: UIData.loginImage,
-          items: ["Login 1", "Login 2"]),
+          items: ["Login With OTP", "Login 2", "Sign Up", "Login 4"]),
       Menu(
           title: "Timeline",
           icon: Icons.timeline,
           image: UIData.timelineImage,
-          items: ["Timeline 1", "Timeline 2"]),
+          items: ["Feed", "Tweets", "Timeline 3", "Timeline 4"]),
       Menu(
           title: "Dashboard",
           icon: Icons.dashboard,
           image: UIData.dashboardImage,
-          items: ["Dashboard 1", "Dashboard 2"]),
+          items: ["Dashboard 1", "Dashboard 2", "Dashboard 3", "Dashboard 4"]),
       Menu(
           title: "Settings",
           icon: Icons.settings,
           image: UIData.settingsImage,
-          items: ["Settings 1", "Settings 2"]),
+          items: ["Device Settings", "Settings 2", "Settings 3", "Settings 4"]),
       Menu(
           title: "No Item",
           icon: Icons.not_interested,
           image: UIData.blankImage,
-          items: ["No Item 1", "No Item 2"]),
+          items: ["No Search Result", "No Internet", "No Item 3", "No Item 4"]),
       Menu(
           title: "Payment",
           icon: Icons.payment,
           image: UIData.paymentImage,
-          items: ["Payment 1", "Payment 2"]),
+          items: ["Credit Card", "Payment 2", "Payment 3", "Payment 4"]),
     ];
   }
 }

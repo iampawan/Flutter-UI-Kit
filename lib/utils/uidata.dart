@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -5,16 +6,16 @@ import 'package:flutter/material.dart';
 class UIData {
   //routes
   static const String homeRoute = "/home";
-  static const String profileOneRoute = "/Profile 1";
-  static const String notFoundRoute = "/No Item 1";
-  static const String timelineOneRoute = "/Timeline 1";
-  static const String timelineTwoRoute = "/Timeline 2";
-  static const String settingsOneRoute = "/Settings 1";
-  static const String shoppingOneRoute = "/Shopping 1";
-  static const String shoppingTwoRoute = "/Shopping 2";
-  static const String shoppingThreeRoute = "/Shopping 3";
-  static const String paymentOneRoute = "/Payment 1";
-  static const String loginOneRoute = "/Login 1";
+  static const String profileOneRoute = "/View Profile";
+  static const String notFoundRoute = "/No Search Result";
+  static const String timelineOneRoute = "/Feed";
+  static const String timelineTwoRoute = "/Tweets";
+  static const String settingsOneRoute = "/Device Settings";
+  static const String shoppingOneRoute = "/Shopping List";
+  static const String shoppingTwoRoute = "/Shopping Details";
+  static const String shoppingThreeRoute = "/Product Details";
+  static const String paymentOneRoute = "/Credit Card";
+  static const String loginOneRoute = "/Login With OTP";
   static const String dashboardOneRoute = "/Dashboard 1";
   static const String dashboardTwoRoute = "/Dashboard 2";
 
@@ -69,4 +70,12 @@ class UIData {
     Colors.blueGrey.shade800,
     Colors.black87,
   ];
+
+  //randomcolor
+  static final Random _random = new Random();
+
+  /// Returns a random color.
+  static Color next() {
+    return new Color(0xFF000000 + _random.nextInt(0x00FFFFFF));
+  }
 }

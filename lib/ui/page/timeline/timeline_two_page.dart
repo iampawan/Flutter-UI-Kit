@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_uikit/logic/bloc/post_bloc.dart';
 import 'package:flutter_uikit/model/post.dart';
+import 'package:flutter_uikit/ui/widgets/common_drawer.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -167,7 +168,7 @@ class TimelineTwoPageState extends State<TimelineTwoPage> {
         title: Text("Tweet"),
       ),
       body: bodyData(),
-      drawer: new Drawer(),
+      drawer: CommonDrawer(),
       floatingActionButton: StreamBuilder<bool>(
         stream: postBloc.fabVisible,
         initialData: true,

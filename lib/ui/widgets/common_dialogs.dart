@@ -19,7 +19,7 @@ fetchApiResult(BuildContext context, NetworkServiceResponse snapshot) {
   );
 }
 
-showSuccess(BuildContext context) {
+showSuccess(BuildContext context, String message, IconData icon) {
   showDialog(
       context: context,
       builder: (context) => Center(
@@ -34,14 +34,14 @@ showSuccess(BuildContext context) {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Icon(
-                      FontAwesomeIcons.check,
+                      icon,
                       color: Colors.green,
                     ),
                     SizedBox(
                       height: 10.0,
                     ),
                     Text(
-                      UIData.success,
+                      message,
                       style: TextStyle(
                           fontFamily: UIData.ralewayFont, color: Colors.white),
                     )

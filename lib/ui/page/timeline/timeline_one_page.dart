@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_uikit/logic/bloc/post_bloc.dart';
 import 'package:flutter_uikit/model/post.dart';
 import 'package:flutter_uikit/ui/widgets/common_divider.dart';
+import 'package:flutter_uikit/ui/widgets/common_drawer.dart';
 import 'package:flutter_uikit/ui/widgets/label_icon.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -162,7 +163,7 @@ class TimelineOnePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: CommonDrawer(),
       body: bodySliverList(),
     );
   }
