@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_uikit/utils/uidata.dart';
 
 class LabelIcon extends StatelessWidget {
   final label;

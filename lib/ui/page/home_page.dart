@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_uikit/logic/bloc/menu_bloc.dart';
 import 'package:flutter_uikit/model/menu.dart';
-import 'package:flutter_uikit/ui/widgets/common_dialogs.dart';
+import 'package:flutter_uikit/ui/widgets/about_tile.dart';
+import 'package:flutter_uikit/ui/widgets/profile_tile.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatelessWidget {
   final _scaffoldState = GlobalKey<ScaffoldState>();
@@ -125,33 +125,66 @@ class HomePage extends StatelessWidget {
         });
   }
 
+  Widget header() => Ink(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(colors: UIData.kitGradients2)),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 25.0,
+                backgroundImage: NetworkImage(
+                    "https://avatars0.githubusercontent.com/u/12619420?s=460&v=4"),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ProfileTile(
+                  title: "Pawan Kumar",
+                  subtitle: "mtechviral@gmail.com",
+                  textColor: Colors.white,
+                ),
+              )
+            ],
+          ),
+        ),
+      );
+
   void _showModalBottomSheet(BuildContext context, Menu menu) {
     showModalBottomSheet(
         context: context,
         builder: (context) => Material(
-              color: Colors.white,
-              shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.only(
-                      topLeft: new Radius.circular(12.0),
-                      topRight: new Radius.circular(12.0))),
-              child: ListView.builder(
-                shrinkWrap: true,
-                itemCount: menu.items.length,
-                itemBuilder: (context, i) => new ListTile(
-                    leading: Icon(
-                      menu.icon,
-                      color: UIData.next(),
-                    ),
-                    title: Text(
-                      menu.items[i],
-                      style: TextStyle(fontWeight: FontWeight.w700),
-                    ),
-                    onTap: () {
-                      Navigator.pop(context);
-                      Navigator.pushNamed(context, "/${menu.items[i]}");
-                    }),
-              ),
-            ));
+            color: Colors.white,
+            shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.only(
+                    topLeft: new Radius.circular(20.0),
+                    topRight: new Radius.circular(20.0))),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                header(),
+                Expanded(
+                  child: ListView.builder(
+                    shrinkWrap: false,
+                    itemCount: menu.items.length,
+                    itemBuilder: (context, i) => Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                          child: ListTile(
+                              title: Text(
+                                menu.items[i],
+                              ),
+                              onTap: () {
+                                Navigator.pop(context);
+                                Navigator.pushNamed(
+                                    context, "/${menu.items[i]}");
+                              }),
+                        ),
+                  ),
+                ),
+                MyAboutTile()
+              ],
+            )));
   }
 
   @override

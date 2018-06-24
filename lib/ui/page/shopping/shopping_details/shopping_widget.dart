@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_uikit/model/product.dart';
 import 'package:flutter_uikit/ui/page/shopping/shopping_details/shopping_action.dart';
 import 'package:flutter_uikit/ui/widgets/label_icon.dart';
-import 'package:flutter_uikit/ui/widgets/profile_tile.dart';
 
 class ShoppingWidgets extends StatelessWidget {
   Size deviceSize;

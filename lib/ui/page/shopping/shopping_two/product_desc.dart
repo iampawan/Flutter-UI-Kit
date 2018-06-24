@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_uikit/model/product.dart';
-import 'package:flutter_uikit/utils/uidata.dart';
-import 'package:intl/intl.dart';
 
 class ProductDesc extends StatelessWidget {
   final Product product;

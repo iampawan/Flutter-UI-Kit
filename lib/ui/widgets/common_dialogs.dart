@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_uikit/services/network_service_response.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 fetchApiResult(BuildContext context, NetworkServiceResponse snapshot) {
   showDialog(

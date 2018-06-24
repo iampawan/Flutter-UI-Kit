@@ -70,6 +70,10 @@ class UIData {
     Colors.blueGrey.shade800,
     Colors.black87,
   ];
+  static List<Color> kitGradients2 = [
+    Colors.orange.shade800,
+    Colors.pink,
+  ];
 
   //randomcolor
   static final Random _random = new Random();

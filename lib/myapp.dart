@@ -12,7 +12,6 @@ import 'package:flutter_uikit/ui/page/shopping/shopping_details_page.dart';
 import 'package:flutter_uikit/ui/page/shopping/shopping_one_page.dart';
 import 'package:flutter_uikit/ui/page/timeline/timeline_one_page.dart';
 import 'package:flutter_uikit/ui/page/timeline/timeline_two_page.dart';
-import 'package:flutter_uikit/ui/widgets/common_dialogs.dart';
 
 import 'package:flutter_uikit/utils/uidata.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
