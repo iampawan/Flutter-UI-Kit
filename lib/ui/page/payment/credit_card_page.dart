@@ -62,15 +62,19 @@ class CreditCardPage extends StatelessWidget {
               ),
             ),
             StreamBuilder<String>(
-              stream: cardBloc.ccOutputStream,
-              initialData: "**** **** **** ****",
-              builder: (context, snapshot) => Text(
+                stream: cardBloc.ccOutputStream,
+                initialData: "**** **** **** ****",
+                builder: (context, snapshot) {
+                  snapshot.data.length > 0
+                      ? ccMask.updateText(snapshot.data)
+                      : null;
+                  return Text(
                     snapshot.data.length > 0
                         ? snapshot.data
                         : "**** **** **** ****",
                     style: TextStyle(color: Colors.white, fontSize: 25.0),
-                  ),
-            ),
+                  );
+                }),
             SizedBox(
               height: 20.0,
             ),
@@ -78,15 +82,19 @@ class CreditCardPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 StreamBuilder<String>(
-                  stream: cardBloc.expOutputStream,
-                  initialData: "MM/YY",
-                  builder: (context, snapshot) => ProfileTile(
+                    stream: cardBloc.expOutputStream,
+                    initialData: "MM/YY",
+                    builder: (context, snapshot) {
+                      snapshot.data.length > 0
+                          ? expMask.updateText(snapshot.data)
+                          : null;
+                      return ProfileTile(
                         textColor: Colors.white,
                         title: "Expiry",
                         subtitle:
                             snapshot.data.length > 0 ? snapshot.data : "MM/YY",
-                      ),
-                ),
+                      );
+                    }),
                 SizedBox(
                   width: 30.0,
                 ),
@@ -128,34 +136,53 @@ class CreditCardPage extends StatelessWidget {
           children: <Widget>[
             TextField(
               controller: ccMask,
-              keyboardType: TextInputType.number,
+              keyboardType: TextInputType.numberWithOptions(signed: true),
               maxLength: 19,
+              style: TextStyle(
+                  fontFamily: UIData.ralewayFont, color: Colors.black),
               onChanged: (out) => cardBloc.ccInputSink.add(ccMask.text),
               decoration: InputDecoration(
                   labelText: "Credit Card Number",
+                  labelStyle: TextStyle(fontWeight: FontWeight.bold),
                   border: OutlineInputBorder()),
             ),
             TextField(
               controller: expMask,
               keyboardType: TextInputType.number,
               maxLength: 5,
-              onChanged: (out) => cardBloc.expInputSink.add(out),
+              style: TextStyle(
+                  fontFamily: UIData.ralewayFont, color: Colors.black),
+              onChanged: (out) => cardBloc.expInputSink.add(expMask.text),
               decoration: InputDecoration(
-                  labelText: "MM/YY", border: OutlineInputBorder()),
+                  labelStyle: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                  labelText: "MM/YY",
+                  border: OutlineInputBorder()),
             ),
             TextField(
               keyboardType: TextInputType.number,
               maxLength: 3,
+              style: TextStyle(
+                  fontFamily: UIData.ralewayFont, color: Colors.black),
               onChanged: (out) => cardBloc.cvvInputSink.add(out),
               decoration: InputDecoration(
-                  labelText: "CVV", border: OutlineInputBorder()),
+                  labelStyle: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.black),
+                  labelText: "CVV",
+                  border: OutlineInputBorder()),
             ),
             TextField(
               keyboardType: TextInputType.text,
               maxLength: 20,
+              style: TextStyle(
+                  fontFamily: UIData.ralewayFont, color: Colors.black),
               onChanged: (out) => cardBloc.nameInputSink.add(out),
               decoration: InputDecoration(
-                  labelText: "Name on card", border: OutlineInputBorder()),
+                  labelStyle: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.black),
+                  labelText: "Name on card",
+                  border: OutlineInputBorder()),
             ),
           ],
         ),
