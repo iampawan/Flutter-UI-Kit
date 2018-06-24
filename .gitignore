@@ -7,3 +7,6 @@
 build/
 
 .flutter-plugins
+
+.properties
+key.properties
