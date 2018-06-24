@@ -15,6 +15,7 @@ class UIData {
   static const String paymentOneRoute = "/Payment 1";
   static const String loginOneRoute = "/Login 1";
   static const String dashboardOneRoute = "/Dashboard 1";
+  static const String dashboardTwoRoute = "/Dashboard 2";
 
   //strings
   static const String appName = "Flutter UIKit";

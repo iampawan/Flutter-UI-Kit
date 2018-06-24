@@ -7,30 +7,41 @@ class LabelBelowIcon extends StatelessWidget {
   final iconColor;
   final onPressed;
   final circleColor;
+  final isCircleEnabled;
+  final betweenHeight;
 
   LabelBelowIcon(
       {this.label,
       this.icon,
       this.onPressed,
       this.iconColor = Colors.white,
-      this.circleColor});
+      this.circleColor,
+      this.isCircleEnabled = true,
+      this.betweenHeight = 5.0});
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => onPressed,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          CircleAvatar(
-            backgroundColor: circleColor,
-            radius: 20.0,
-            child: Icon(
-              icon,
-              size: 12.0,
-              color: iconColor,
-            ),
-          ),
+          isCircleEnabled
+              ? CircleAvatar(
+                  backgroundColor: circleColor,
+                  radius: 20.0,
+                  child: Icon(
+                    icon,
+                    size: 12.0,
+                    color: iconColor,
+                  ),
+                )
+              : Icon(
+                  icon,
+                  size: 23.0,
+                  color: iconColor,
+                ),
           SizedBox(
-            height: 5.0,
+            height: betweenHeight,
           ),
           Text(
             label,
