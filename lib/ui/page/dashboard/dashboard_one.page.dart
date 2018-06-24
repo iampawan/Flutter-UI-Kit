@@ -119,7 +119,7 @@ class DashboardOnePage extends StatelessWidget {
                   secondLabel: "Payment",
                   secondIconCircleColor: Colors.redAccent,
                   thirdIcon: FontAwesomeIcons.solidStar,
-                  thirdLabel: "Favorites",
+                  thirdLabel: "Fav",
                   thirdIconCircleColor: Colors.pink,
                   fourthIcon: FontAwesomeIcons.wallet,
                   fourthLabel: "Wallet",
