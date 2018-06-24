@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_uikit/ui/page/dashboard/dashboard_one/dashboard_menu_row.dart';
 import 'package:flutter_uikit/ui/widgets/login_background.dart';
@@ -17,7 +18,9 @@ class DashboardOnePage extends StatelessWidget {
                 children: <Widget>[
                   new IconButton(
                     icon: new Icon(
-                      Icons.arrow_back,
+                      defaultTargetPlatform == TargetPlatform.android
+                          ? Icons.arrow_back
+                          : Icons.arrow_back_ios,
                       color: Colors.white,
                     ),
                     onPressed: () => Navigator.canPop(context)
@@ -34,7 +37,9 @@ class DashboardOnePage extends StatelessWidget {
                       Icons.more_vert,
                       color: Colors.white,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      print("hi");
+                    },
                   )
                 ],
               ),
@@ -171,11 +176,12 @@ class DashboardOnePage extends StatelessWidget {
         ),
       );
 
-  Widget allCards() => SingleChildScrollView(
+  Widget allCards(BuildContext context) => SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            appBarColumn(context),
             SizedBox(
-              height: deviceSize.height / 6,
+              height: deviceSize.height * 0.01,
             ),
             searchCard(),
             SizedBox(
@@ -200,8 +206,7 @@ class DashboardOnePage extends StatelessWidget {
           LoginBackground(
             showIcon: false,
           ),
-          appBarColumn(context),
-          allCards(),
+          allCards(context),
         ],
       ),
     );

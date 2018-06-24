@@ -16,7 +16,7 @@ class PostViewModel {
             personImage:
                 "https://avatars0.githubusercontent.com/u/12619420?s=460&v=4",
             messageImage:
-                "https://lh3.googleusercontent.com/0wqw3OhMPcm3zuaUjufs-qdpSpHgG3xFyZ1KDZjARQq-tco9y1kor4lfln-dTR_Tgic=w2247-h1264",
+                "https://cdn.pixabay.com/photo/2018/03/09/16/32/woman-3211957_1280.jpg",
             postTime: "Just Now"),
         Post(
             personName: "Amanda",
@@ -74,7 +74,7 @@ class PostViewModel {
             personImage:
                 "https://avatars0.githubusercontent.com/u/12619420?s=460&v=4",
             messageImage:
-                "https://lh3.googleusercontent.com/0wqw3OhMPcm3zuaUjufs-qdpSpHgG3xFyZ1KDZjARQq-tco9y1kor4lfln-dTR_Tgic=w2247-h1264",
+                "https://cdn.pixabay.com/photo/2018/03/09/16/32/woman-3211957_1280.jpg",
             postTime: "Just Now"),
         Post(
             personName: "Eric",

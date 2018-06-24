@@ -29,6 +29,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.3"
+  cached_network_image:
+    dependency: "direct main"
+    description:
+      name: cached_network_image
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.1+1"
   charcode:
     dependency: transitive
     description:
@@ -76,6 +83,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_cache_manager:
+    dependency: transitive
+    description:
+      name: flutter_cache_manager
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.1"
   flutter_masked_text:
     dependency: "direct main"
     description:
@@ -235,6 +249,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.6.1"
+  path_provider:
+    dependency: transitive
+    description:
+      name: path_provider
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.1"
   plugin:
     dependency: transitive
     description:
@@ -277,6 +298,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.18.0"
+  shared_preferences:
+    dependency: transitive
+    description:
+      name: shared_preferences
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.2"
   shelf:
     dependency: transitive
     description:
@@ -352,6 +380,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
+  synchronized:
+    dependency: transitive
+    description:
+      name: synchronized
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.5.0+1"
   term_glyph:
     dependency: transitive
     description:
@@ -380,6 +415,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.0+4"
+  uuid:
+    dependency: transitive
+    description:
+      name: uuid
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.3"
   vector_math:
     dependency: transitive
     description:
@@ -417,3 +459,4 @@ packages:
     version: "2.1.14"
 sdks:
   dart: ">=2.0.0-dev.62.0 <=2.0.0-dev.63.0.flutter-4c9689c1d2"
+  flutter: ">=0.1.4 <2.0.0"

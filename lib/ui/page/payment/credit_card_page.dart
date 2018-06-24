@@ -136,7 +136,7 @@ class CreditCardPage extends StatelessWidget {
           children: <Widget>[
             TextField(
               controller: ccMask,
-              keyboardType: TextInputType.numberWithOptions(signed: true),
+              keyboardType: TextInputType.number,
               maxLength: 19,
               style: TextStyle(
                   fontFamily: UIData.ralewayFont, color: Colors.black),
@@ -167,8 +167,7 @@ class CreditCardPage extends StatelessWidget {
                   fontFamily: UIData.ralewayFont, color: Colors.black),
               onChanged: (out) => cardBloc.cvvInputSink.add(out),
               decoration: InputDecoration(
-                  labelStyle: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.black),
+                  labelStyle: TextStyle(fontWeight: FontWeight.bold),
                   labelText: "CVV",
                   border: OutlineInputBorder()),
             ),
@@ -180,7 +179,8 @@ class CreditCardPage extends StatelessWidget {
               onChanged: (out) => cardBloc.nameInputSink.add(out),
               decoration: InputDecoration(
                   labelStyle: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.black),
+                    fontWeight: FontWeight.bold,
+                  ),
                   labelText: "Name on card",
                   border: OutlineInputBorder()),
             ),

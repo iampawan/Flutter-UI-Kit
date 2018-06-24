@@ -11,6 +11,7 @@ import 'package:flutter_uikit/ui/page/shopping/product_detail_page.dart';
 import 'package:flutter_uikit/ui/page/shopping/shopping_details_page.dart';
 import 'package:flutter_uikit/ui/page/shopping/shopping_one_page.dart';
 import 'package:flutter_uikit/ui/page/timeline/timeline_one_page.dart';
+import 'package:flutter_uikit/ui/page/timeline/timeline_two_page.dart';
 
 import 'package:flutter_uikit/utils/uidata.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.yellow),
     debugShowCheckedModeBanner: false,
     showPerformanceOverlay: false,
-    home: DashboardTwoPage(),
+    home: HomePage(),
     // initialRoute: UIData.notFoundRoute,
 
     //routes
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
       UIData.homeRoute: (BuildContext context) => HomePage(),
       UIData.profileOneRoute: (BuildContext context) => ProfileOnePage(),
       UIData.timelineOneRoute: (BuildContext context) => TimelineOnePage(),
+      UIData.timelineTwoRoute: (BuildContext context) => TimelineTwoPage(),
       UIData.notFoundRoute: (BuildContext context) => NotFoundPage(),
       UIData.settingsOneRoute: (BuildContext context) => SettingsOnePage(),
       UIData.shoppingOneRoute: (BuildContext context) => ShoppingOnePage(),
