@@ -76,7 +76,7 @@ buildTypes {
 }
 ```
 
-1.  Open r\Flutter-UI-Kit-master\android\local.properties and add -
+2.  Open r\Flutter-UI-Kit-master\android\local.properties and add -
 
 ```
 flutter.versionName=1.0.0
