@@ -29,6 +29,10 @@ Happy learning. :+1:
 
 [Let's Flutter](https://www.facebook.com/groups/425920117856409/)
 
+## Collection of flutter apps with tutorial
+
+[Flutter Example Apps](https://github.com/iampawan/FlutterExampleApps)
+
 # Screenshots
 
 <img height="480px" src="raw/fu1.png">
@@ -57,7 +61,9 @@ Happy learning. :+1:
 
 ### Missing Key.Properties file
 
-If you try to build the project straight away, you'll get an error complaining that a `key.properties` file is missing. To resolve that, Open r\Flutter-UI-Kit-master\android\app\build.gradle file and comment following lines-
+If you try to build the project straight away, you'll get an error complaining that a `key.properties` file is missing and Exit code 1 from: /Flutter-UI-Kit-master/android/gradlew app:properties:. To resolve that,
+
+1.  Open r\Flutter-UI-Kit-master\android\app\build.gradle file and comment following lines-
 
 ```
 //keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
@@ -75,6 +81,14 @@ buildTypes {
 // signingConfig signingConfigs.release
 // }
 }
+```
+
+1.  Open r\Flutter-UI-Kit-master\android\local.properties and add -
+
+```
+flutter.versionName=1.0.0
+flutter.versionCode=1
+flutter.buildMode=release
 ```
 
 ### The stack & building from source
