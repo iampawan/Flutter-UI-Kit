@@ -35,14 +35,7 @@ Happy learning. :+1:
 
 # Screenshots
 
-<img height="480px" src="raw/fu1.png">
-<img height="480px" src="raw/fu2.png">
-<img height="480px" src="raw/fu3.png">
-<img height="480px" src="raw/fu4.png">
-<img height="480px" src="raw/fu5.png">
-<img height="480px" src="raw/fu6.png">
-<img height="480px" src="raw/fu7.png">
-<img height="480px" src="raw/fu8.png">
+<img height="480px" src="raw/fu1.png"> <img height="480px" src="raw/fu2.png"> <img height="480px" src="raw/fu3.png"> <img height="480px" src="raw/fu4.png"> <img height="480px" src="raw/fu5.png"> <img height="480px" src="raw/fu6.png"> <img height="480px" src="raw/fu7.png"> <img height="480px" src="raw/fu8.png">
 
 ## Available Templates:
 
