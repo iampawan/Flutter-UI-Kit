@@ -24,6 +24,7 @@ class LabelBelowIcon extends StatelessWidget {
       onTap: () => onPressed,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           isCircleEnabled
               ? CircleAvatar(
@@ -45,6 +46,7 @@ class LabelBelowIcon extends StatelessWidget {
           ),
           Text(
             label,
+            textAlign: TextAlign.center,
             style: TextStyle(fontFamily: UIData.ralewayFont),
           )
         ],
