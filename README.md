@@ -35,20 +35,20 @@ Happy learning. :+1:
 
 # Screenshots
 
-<img height="480px" src="raw/fu1.png"> <img height="480px" src="raw/fu2.png"> <img height="480px" src="raw/fu3.png"> <img height="480px" src="raw/fu4.png"> <img height="480px" src="raw/fu5.png"> <img height="480px" src="raw/fu6.png"> <img height="480px" src="raw/fu7.png"> <img height="480px" src="raw/fu8.png">
+<img height="480px" src="raw/fu1.png"> <img height="480px" src="raw/fu2.png"> <img height="480px" src="raw/fu3.png"> <img height="480px" src="raw/fu4.png"> <img height="480px" src="raw/fu5.png"> <img height="480px" src="raw/fu6.png"> <img height="480px" src="raw/fu7.png"> <img height="480px" src="raw/fu8.png"><img height="480px" src="raw/fu9.png"><img height="480px" src="raw/fu10.png"><img height="480px" src="raw/fu11.png">
 
 ## Available Templates:
 
 | Templates Category |               Currently Available                |
 | :----------------- | :----------------------------------------------: |
-| Profile            |                   View Profile                   |
+| Profile            |             View Profile, Profile 2              |
 | Shopping           | Shopping List, Shopping Details, Product Details |
-| Login              |                  Login With OTP                  |
+| Login              |             Login With OTP, Login 2              |
 | Timeline           |                   Feed, Tweets                   |
 | Dashboard          |             Dashboard 1, Dashboard 2             |
 | Settings           |                 Device Settings                  |
 | No Item            |                 No Search Result                 |
-| Payment            |                   Credit Card                    |
+| Payment            |           Credit Card, Payment Success           |
 
 ## Building the project
 

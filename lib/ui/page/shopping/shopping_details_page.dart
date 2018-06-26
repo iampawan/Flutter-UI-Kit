@@ -36,7 +36,7 @@ class ShoppingDetailsPage extends StatelessWidget {
       productBloc: productBloc,
       child: CommonScaffold(
         backGroundColor: Colors.grey.shade100,
-        actionFirstIcon: Icons.shopping_cart,
+        actionFirstIcon: null,
         appTitle: "Product Detail",
         showFAB: true,
         scaffoldKey: _scaffoldState,

@@ -157,8 +157,8 @@ class HomePage extends StatelessWidget {
             color: Colors.white,
             shape: RoundedRectangleBorder(
                 borderRadius: new BorderRadius.only(
-                    topLeft: new Radius.circular(20.0),
-                    topRight: new Radius.circular(20.0))),
+                    topLeft: new Radius.circular(15.0),
+                    topRight: new Radius.circular(15.0))),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[

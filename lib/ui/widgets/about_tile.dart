@@ -23,7 +23,7 @@ class MyAboutTile extends StatelessWidget {
         ),
       ],
       applicationName: UIData.appName,
-      applicationVersion: "1.0.0",
+      applicationVersion: "1.0.1",
       applicationLegalese: "Apache License 2.0",
     );
   }
