@@ -18,6 +18,7 @@ class UIData {
   static const String paymentOneRoute = "/Credit Card";
   static const String paymentTwoRoute = "/Payment Success";
   static const String loginOneRoute = "/Login With OTP";
+  static const String loginTwoRoute = "/Login 2";
   static const String dashboardOneRoute = "/Dashboard 1";
   static const String dashboardTwoRoute = "/Dashboard 2";
 

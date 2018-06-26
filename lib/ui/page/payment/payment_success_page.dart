@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_uikit/ui/widgets/common_scaffold.dart';
 import 'package:flutter_uikit/ui/widgets/profile_tile.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:random_pk/random_pk.dart';
 
 class PaymentSuccessPage extends StatefulWidget {
   @override
@@ -58,7 +57,7 @@ class PaymentSuccessPageState extends State<PaymentSuccessPage> {
                     height: 10.0,
                   ),
                   FloatingActionButton(
-                    backgroundColor: Colors.grey,
+                    backgroundColor: Colors.black,
                     child: Icon(
                       Icons.clear,
                       color: Colors.white,
