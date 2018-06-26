@@ -7,6 +7,7 @@ class Post {
   int likesCount;
   int commentsCount;
   String postTime;
+  List<String> photos;
 
   Post(
       {this.personName,
@@ -16,5 +17,6 @@ class Post {
       this.commentsCount,
       this.likesCount,
       this.messageImage,
-      this.postTime});
+      this.postTime,
+      this.photos});
 }

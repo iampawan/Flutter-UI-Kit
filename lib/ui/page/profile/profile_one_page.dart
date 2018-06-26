@@ -55,30 +55,7 @@ class ProfileOnePage extends StatelessWidget {
       );
 
   //column2
-  Widget followColumn() => Container(
-        height: deviceSize.height * 0.13,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            ProfileTile(
-              title: "1.5K",
-              subtitle: "Posts",
-            ),
-            ProfileTile(
-              title: "2.5K",
-              subtitle: "Followers",
-            ),
-            ProfileTile(
-              title: "10K",
-              subtitle: "Comments",
-            ),
-            ProfileTile(
-              title: "1.2K",
-              subtitle: "Following",
-            )
-          ],
-        ),
-      );
+
   //column3
   Widget descColumn() => Container(
         height: deviceSize.height * 0.13,
@@ -145,7 +122,7 @@ class ProfileOnePage extends StatelessWidget {
         children: <Widget>[
           profileColumn(),
           CommonDivider(),
-          followColumn(),
+          followColumn(deviceSize),
           CommonDivider(),
           descColumn(),
           CommonDivider(),
@@ -169,3 +146,28 @@ class ProfileOnePage extends StatelessWidget {
     return _scaffold();
   }
 }
+
+Widget followColumn(Size deviceSize) => Container(
+      height: deviceSize.height * 0.13,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: <Widget>[
+          ProfileTile(
+            title: "1.5K",
+            subtitle: "Posts",
+          ),
+          ProfileTile(
+            title: "2.5K",
+            subtitle: "Followers",
+          ),
+          ProfileTile(
+            title: "10K",
+            subtitle: "Comments",
+          ),
+          ProfileTile(
+            title: "1.2K",
+            subtitle: "Following",
+          )
+        ],
+      ),
+    );

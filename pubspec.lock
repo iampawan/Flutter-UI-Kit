@@ -256,6 +256,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.29.0+1"
+  random_pk:
+    dependency: "direct dev"
+    description:
+      name: random_pk
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.3"
   rxdart:
     dependency: "direct main"
     description:

@@ -14,18 +14,20 @@ class CommonScaffold extends StatelessWidget {
   final showBottomNav;
   final floatingIcon;
   final centerDocked;
+  final elevation;
 
   CommonScaffold(
       {this.appTitle,
       this.bodyData,
-      this.showFAB,
+      this.showFAB = false,
       this.showDrawer = false,
       this.backGroundColor,
       this.actionFirstIcon = Icons.search,
       this.scaffoldKey,
       this.showBottomNav = false,
       this.centerDocked = false,
-      this.floatingIcon});
+      this.floatingIcon,
+      this.elevation = 4.0});
 
   Widget myBottomBar() => new BottomAppBar(
         hasNotch: true,
@@ -85,6 +87,7 @@ class CommonScaffold extends StatelessWidget {
       key: scaffoldKey != null ? scaffoldKey : null,
       backgroundColor: backGroundColor != null ? backGroundColor : null,
       appBar: AppBar(
+        elevation: elevation,
         backgroundColor: Colors.black,
         title: Text(appTitle),
         actions: <Widget>[
