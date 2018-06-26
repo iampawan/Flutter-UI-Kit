@@ -53,7 +53,7 @@ class MenuViewModel {
           title: "Payment",
           icon: Icons.payment,
           image: UIData.paymentImage,
-          items: ["Credit Card", "Payment 2", "Payment 3", "Payment 4"]),
+          items: ["Credit Card", "Payment Success", "Payment 3", "Payment 4"]),
     ];
   }
 }

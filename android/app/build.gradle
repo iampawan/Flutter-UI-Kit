@@ -43,6 +43,7 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     signingConfigs {
         release {
@@ -63,7 +64,9 @@ android {
 
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
     }
+
 }
 
 flutter {

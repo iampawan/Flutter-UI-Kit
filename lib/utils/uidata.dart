@@ -16,6 +16,7 @@ class UIData {
   static const String shoppingTwoRoute = "/Shopping Details";
   static const String shoppingThreeRoute = "/Product Details";
   static const String paymentOneRoute = "/Credit Card";
+  static const String paymentTwoRoute = "/Payment Success";
   static const String loginOneRoute = "/Login With OTP";
   static const String dashboardOneRoute = "/Dashboard 1";
   static const String dashboardTwoRoute = "/Dashboard 2";
@@ -73,8 +74,8 @@ class UIData {
     Colors.black87,
   ];
   static List<Color> kitGradients2 = [
-    Colors.orange.shade800,
-    Colors.pink,
+    Color(0xffb7ac50),
+    Colors.orange.shade900
   ];
 
   //randomcolor

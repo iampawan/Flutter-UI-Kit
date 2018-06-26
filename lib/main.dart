@@ -5,7 +5,7 @@ import 'package:flutter_uikit/myapp.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  MaterialPageRoute.debugEnableFadingRoutes = true;
+  // MaterialPageRoute.debugEnableFadingRoutes = true;
   Injector.configure(Flavor.MOCK);
   runApp(MyApp());
 }

@@ -51,10 +51,11 @@ class CreditCardPage extends StatelessWidget {
   Widget cardEntries() => Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Align(
-              alignment: Alignment.centerRight,
+              alignment: Alignment.topRight,
               child: Icon(
                 FontAwesomeIcons.ccVisa,
                 size: 40.0,
