@@ -30,7 +30,7 @@ class CommonScaffold extends StatelessWidget {
       this.elevation = 4.0});
 
   Widget myBottomBar() => new BottomAppBar(
-        hasNotch: true,
+        shape: CircularNotchedRectangle(),
         child: Ink(
           height: 50.0,
           decoration: new BoxDecoration(
