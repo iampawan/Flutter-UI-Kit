@@ -19,6 +19,9 @@ dependencies:
   font_awesome_flutter:
   rxdart:
   flutter_masked_text:
+  flutter_localizations:
+    sdk: flutter
+
 
 dev_dependencies:
   random_pk:
@@ -40,6 +43,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/images/
+   - locale/i18n_en.json
+   - locale/i18n_hi.json
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

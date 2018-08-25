@@ -8,7 +8,7 @@ import 'package:flutter_uikit/model/fetch_process.dart';
 import 'package:flutter_uikit/ui/page/login/login_page.dart';
 import 'package:flutter_uikit/ui/widgets/api_subscription.dart';
 import 'package:flutter_uikit/ui/widgets/gradient_button.dart';
-import 'package:flutter_uikit/utils/uidata.dart';
+import 'package:flutter_uikit/utils/translations.dart';
 
 class LoginCard extends StatefulWidget {
   @override
@@ -38,8 +38,10 @@ class _LoginCardState extends State<LoginCard>
                       enabled: !snapshot.data,
                       style: new TextStyle(fontSize: 15.0, color: Colors.black),
                       decoration: new InputDecoration(
-                          hintText: UIData.enter_code_hint,
-                          labelText: UIData.enter_code_label,
+                          hintText:
+                              Translations.of(context).text("enter_code_hint"),
+                          labelText:
+                              Translations.of(context).text("enter_code_label"),
                           labelStyle: TextStyle(fontWeight: FontWeight.w700)),
                     ),
                     new SizedBox(
@@ -53,8 +55,10 @@ class _LoginCardState extends State<LoginCard>
                             style: new TextStyle(
                                 fontSize: 15.0, color: Colors.black),
                             decoration: new InputDecoration(
-                                hintText: UIData.enter_otp_hint,
-                                labelText: UIData.enter_otp_label,
+                                hintText: Translations.of(context)
+                                    .text("enter_otp_hint"),
+                                labelText: Translations.of(context)
+                                    .text("enter_otp_label"),
                                 labelStyle:
                                     TextStyle(fontWeight: FontWeight.w700)),
                             obscureText: true,
@@ -69,7 +73,7 @@ class _LoginCardState extends State<LoginCard>
                                   ? loginBloc.otpSink.add(UserLoginViewModel(
                                       phonenumber: phoneNumber))
                                   : showPhoneError(context),
-                              text: UIData.get_otp)
+                              text: Translations.of(context).text("get_otp"))
                           : new GradientButton(
                               onPressed: () {
                                 otp?.length == 4
@@ -78,11 +82,12 @@ class _LoginCardState extends State<LoginCard>
                                             phonenumber: phoneNumber, otp: otp))
                                     : showOTPError(context);
                               },
-                              text: UIData.login),
+                              text: Translations.of(context).text("login")),
                     ),
                     snapshot.data == true
                         ? new FlatButton(
-                            child: Text(UIData.resend_otp),
+                            child: Text(
+                                Translations.of(context).text("resend_otp")),
                             onPressed: () => loginBloc.resendOtpSink.add(true),
                           )
                         : new Container()
@@ -127,8 +132,7 @@ class _LoginCardState extends State<LoginCard>
   }
 
   showPhoneError(BuildContext context) {
-    LoginProvider
-        .of(context)
+    LoginProvider.of(context)
         .validationErrorCallback(LoginValidationType.phone);
   }
 

@@ -1,0 +1,12 @@
+{
+"app_name":"Flutter UI-Kit ",
+"enter_code_label":"Phone Number",
+"enter_code_hint":"10 Digit Phone Number",
+"enter_otp_label":"OTP",
+"enter_otp_hint":"4 Digit OTP",
+"get_otp":"Get OTP",
+"resend_otp":"Resend OTP",
+"login":"Login",
+"enter_valid_number":"Enter 10 digit phone number",
+"enter_valid_otp":"Enter 4 digit otp"
+}

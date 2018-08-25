@@ -43,7 +43,7 @@ class ShoppingActionState extends State<ShoppingAction> {
                           selected: _value == pc.colorName,
                           onSelected: (selected) {
                             setState(() {
-                              return _value = selected ? pc.colorName : null;
+                              _value = selected ? pc.colorName : null;
                             });
                           }),
                     ))
@@ -76,7 +76,7 @@ class ShoppingActionState extends State<ShoppingAction> {
                           selected: _sizeValue == pc,
                           onSelected: (selected) {
                             setState(() {
-                              return _sizeValue = selected ? pc : null;
+                              _sizeValue = selected ? pc : null;
                             });
                           }),
                     ))
