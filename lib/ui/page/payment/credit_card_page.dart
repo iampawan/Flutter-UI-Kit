@@ -20,8 +20,8 @@ class CreditCardPage extends StatelessWidget {
   Widget creditCardWidget() {
     var deviceSize = MediaQuery.of(_context).size;
     return Container(
-      height: deviceSize.height * 0.3,
       color: Colors.grey.shade300,
+      height: deviceSize.height * 0.4,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Card(
@@ -31,6 +31,7 @@ class CreditCardPage extends StatelessWidget {
             children: <Widget>[
               Container(
                 decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4.0),
                     gradient: LinearGradient(colors: UIData.kitGradients)),
               ),
               Opacity(
