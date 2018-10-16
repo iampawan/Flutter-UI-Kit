@@ -10,14 +10,11 @@ class ProfileOnePage extends StatelessWidget {
   Widget profileColumn() => Container(
         height: deviceSize.height * 0.24,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             ProfileTile(
               title: "Pawan Kumar",
               subtitle: "Developer",
-            ),
-            SizedBox(
-              height: 10.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -73,46 +70,48 @@ class ProfileOnePage extends StatelessWidget {
         ),
       );
   //column4
-  Widget accountColumn() => Container(
-        height: deviceSize.height * 0.3,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                ProfileTile(
-                  title: "Website",
-                  subtitle: "about.me/imthepk",
-                ),
-                ProfileTile(
-                  title: "Phone",
-                  subtitle: "+919876543210",
-                ),
-                ProfileTile(
-                  title: "YouTube",
-                  subtitle: "youtube.com/mtechviral",
-                ),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                ProfileTile(
-                  title: "Location",
-                  subtitle: "New Delhi",
-                ),
-                ProfileTile(
-                  title: "Email",
-                  subtitle: "mtechviral@gmail.com",
-                ),
-                ProfileTile(
-                  title: "Facebook",
-                  subtitle: "fb.com/imthepk",
-                ),
-              ],
-            ),
-          ],
+  Widget accountColumn() => FittedBox(
+        child: Container(
+          height: deviceSize.height * 0.3,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  ProfileTile(
+                    title: "Website",
+                    subtitle: "about.me/imthepk",
+                  ),
+                  ProfileTile(
+                    title: "Phone",
+                    subtitle: "+919876543210",
+                  ),
+                  ProfileTile(
+                    title: "YouTube",
+                    subtitle: "youtube.com/mtechviral",
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  ProfileTile(
+                    title: "Location",
+                    subtitle: "New Delhi",
+                  ),
+                  ProfileTile(
+                    title: "Email",
+                    subtitle: "mtechviral@gmail.com",
+                  ),
+                  ProfileTile(
+                    title: "Facebook",
+                    subtitle: "fb.com/imthepk",
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       );
 
