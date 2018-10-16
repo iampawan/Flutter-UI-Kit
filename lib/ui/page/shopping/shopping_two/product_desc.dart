@@ -7,8 +7,8 @@ class ProductDesc extends StatelessWidget {
   const ProductDesc({Key key, this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    var deviceSize = MediaQuery.of(context).size;
     return new Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.all(16.0),
@@ -49,23 +49,23 @@ class ProductDesc extends StatelessWidget {
           height: 30.0,
         ),
         new Card(
+          clipBehavior: Clip.antiAlias,
           shape: new RoundedRectangleBorder(
               borderRadius: new BorderRadius.circular(8.0)),
           color: Colors.white,
-          child: new Ink(
-            height: deviceSize.height * 0.1,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
             child: new Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 new Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     new Text(
                       "Your Size",
                       style: TextStyle(fontWeight: FontWeight.w700),
                     ),
-                    new SizedBox(height: 10.0),
                     new RawChip(
                         label: new Text(
                           "M",
@@ -75,11 +75,10 @@ class ProductDesc extends StatelessWidget {
                   ],
                 ),
                 new Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     new Text("Color",
                         style: TextStyle(fontWeight: FontWeight.w700)),
-                    new SizedBox(height: 10.0),
                     new RawChip(
                       label: new Text(
                         "Red Blue",
@@ -90,11 +89,10 @@ class ProductDesc extends StatelessWidget {
                   ],
                 ),
                 new Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     new Text("Product ID",
                         style: TextStyle(fontWeight: FontWeight.w700)),
-                    new SizedBox(height: 10.0),
                     new RawChip(
                       label: new Text(
                         "PQ1001",

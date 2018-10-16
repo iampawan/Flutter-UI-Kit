@@ -21,6 +21,7 @@ class _ProductCardState extends State<ProductCard>
     var cardHeight = deviceSize.height * 0.8;
     var cardWidth = deviceSize.width * 0.85;
     return Card(
+      clipBehavior: Clip.antiAlias,
       elevation: 1.0,
       shape: new RoundedRectangleBorder(
           borderRadius: new BorderRadius.circular(15.0)),
@@ -50,7 +51,7 @@ class _ProductCardState extends State<ProductCard>
                       topRight: const Radius.circular(30.0)),
                   color: Colors.white,
                 ),
-                child: new ProductDesc(product:widget.product),
+                child: new ProductDesc(product: widget.product),
               ),
             ),
           ],
