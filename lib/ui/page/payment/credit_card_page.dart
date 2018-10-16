@@ -25,6 +25,7 @@ class CreditCardPage extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Card(
+          clipBehavior: Clip.antiAlias,
           elevation: 3.0,
           child: Stack(
             fit: StackFit.expand,
@@ -40,7 +41,7 @@ class CreditCardPage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              cardEntries(),
+              FittedBox(child: cardEntries()),
               Positioned(
                 right: 10.0,
                 top: 10.0,
