@@ -12,9 +12,11 @@ class LoginTwoPage extends StatelessWidget {
     );
   }
 
-  loginBody() => Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[loginHeader(), loginFields()],
+  loginBody() => SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[loginHeader(), loginFields()],
+        ),
       );
 
   loginHeader() => Column(
