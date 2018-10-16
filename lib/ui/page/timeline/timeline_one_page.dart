@@ -24,8 +24,7 @@ class TimelineOnePage extends StatelessWidget {
               children: <Widget>[
                 Text(
                   post.personName,
-                  style: Theme
-                      .of(context)
+                  style: Theme.of(context)
                       .textTheme
                       .body1
                       .apply(fontWeightDelta: 700),
@@ -45,24 +44,27 @@ class TimelineOnePage extends StatelessWidget {
       );
 
   //column last
-  Widget actionColumn(Post post) => ButtonBar(
-        alignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          LabelIcon(
-            label: "${post.likesCount} Likes",
-            icon: FontAwesomeIcons.solidThumbsUp,
-            iconColor: Colors.green,
-          ),
-          LabelIcon(
-            label: "${post.commentsCount} Comments",
-            icon: FontAwesomeIcons.comment,
-            iconColor: Colors.blue,
-          ),
-          Text(
-            post.postTime,
-            style: TextStyle(fontFamily: UIData.ralewayFont),
-          )
-        ],
+  Widget actionColumn(Post post) => FittedBox(
+        fit: BoxFit.contain,
+        child: ButtonBar(
+          alignment: MainAxisAlignment.center,
+          children: <Widget>[
+            LabelIcon(
+              label: "${post.likesCount} Likes",
+              icon: FontAwesomeIcons.solidThumbsUp,
+              iconColor: Colors.green,
+            ),
+            LabelIcon(
+              label: "${post.commentsCount} Comments",
+              icon: FontAwesomeIcons.comment,
+              iconColor: Colors.blue,
+            ),
+            Text(
+              post.postTime,
+              style: TextStyle(fontFamily: UIData.ralewayFont),
+            )
+          ],
+        ),
       );
 
   //post cards
