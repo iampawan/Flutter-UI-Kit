@@ -9,45 +9,51 @@ class ProfileOnePage extends StatelessWidget {
   //Column1
   Widget profileColumn() => Container(
         height: deviceSize.height * 0.24,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            ProfileTile(
-              title: "Pawan Kumar",
-              subtitle: "Developer",
-            ),
-            Row(
+        child: FittedBox(
+          alignment: Alignment.center,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.chat),
-                  color: Colors.black,
-                  onPressed: () {},
+                ProfileTile(
+                  title: "Pawan Kumar",
+                  subtitle: "Developer",
                 ),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius:
-                        new BorderRadius.all(new Radius.circular(50.0)),
-                    border: new Border.all(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    IconButton(
+                      icon: Icon(Icons.chat),
                       color: Colors.black,
-                      width: 4.0,
+                      onPressed: () {},
                     ),
-                  ),
-                  child: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        "https://avatars0.githubusercontent.com/u/12619420?s=460&v=4"),
-                    foregroundColor: Colors.black,
-                    radius: 40.0,
-                  ),
-                ),
-                IconButton(
-                  icon: Icon(Icons.call),
-                  color: Colors.black,
-                  onPressed: () {},
-                ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius:
+                            new BorderRadius.all(new Radius.circular(50.0)),
+                        border: new Border.all(
+                          color: Colors.black,
+                          width: 4.0,
+                        ),
+                      ),
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage(
+                            "https://avatars0.githubusercontent.com/u/12619420?s=460&v=4"),
+                        foregroundColor: Colors.black,
+                        radius: 40.0,
+                      ),
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.call),
+                      color: Colors.black,
+                      onPressed: () {},
+                    ),
+                  ],
+                )
               ],
-            )
-          ],
+            ),
+          ),
         ),
       );
 
@@ -76,39 +82,43 @@ class ProfileOnePage extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  ProfileTile(
-                    title: "Website",
-                    subtitle: "about.me/imthepk",
-                  ),
-                  ProfileTile(
-                    title: "Phone",
-                    subtitle: "+919876543210",
-                  ),
-                  ProfileTile(
-                    title: "YouTube",
-                    subtitle: "youtube.com/mtechviral",
-                  ),
-                ],
+              FittedBox(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    ProfileTile(
+                      title: "Website",
+                      subtitle: "about.me/imthepk",
+                    ),
+                    ProfileTile(
+                      title: "Phone",
+                      subtitle: "+919876543210",
+                    ),
+                    ProfileTile(
+                      title: "YouTube",
+                      subtitle: "youtube.com/mtechviral",
+                    ),
+                  ],
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  ProfileTile(
-                    title: "Location",
-                    subtitle: "New Delhi",
-                  ),
-                  ProfileTile(
-                    title: "Email",
-                    subtitle: "mtechviral@gmail.com",
-                  ),
-                  ProfileTile(
-                    title: "Facebook",
-                    subtitle: "fb.com/imthepk",
-                  ),
-                ],
+              FittedBox(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    ProfileTile(
+                      title: "Location",
+                      subtitle: "New Delhi",
+                    ),
+                    ProfileTile(
+                      title: "Email",
+                      subtitle: "mtechviral@gmail.com",
+                    ),
+                    ProfileTile(
+                      title: "Facebook",
+                      subtitle: "fb.com/imthepk",
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
