@@ -41,7 +41,11 @@ class CreditCardPage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              FittedBox(child: cardEntries()),
+              MediaQuery.of(_context).orientation == Orientation.portrait
+                  ? cardEntries()
+                  : FittedBox(
+                      child: cardEntries(),
+                    ),
               Positioned(
                 right: 10.0,
                 top: 10.0,

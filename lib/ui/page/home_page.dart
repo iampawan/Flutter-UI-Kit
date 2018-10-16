@@ -10,12 +10,14 @@ import 'package:flutter_uikit/utils/uidata.dart';
 class HomePage extends StatelessWidget {
   final _scaffoldState = GlobalKey<ScaffoldState>();
   Size deviceSize;
+  BuildContext _context;
   //menuStack
   Widget menuStack(BuildContext context, Menu menu) => InkWell(
         onTap: () => _showModalBottomSheet(context, menu),
         splashColor: Colors.orange,
         child: Card(
-          elevation: 5.0,
+          clipBehavior: Clip.antiAlias,
+          elevation: 2.0,
           child: Stack(
             fit: StackFit.expand,
             children: <Widget>[
@@ -92,7 +94,10 @@ class HomePage extends StatelessWidget {
   //bodygrid
   Widget bodyGrid(List<Menu> menu) => SliverGrid(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
+          crossAxisCount:
+              MediaQuery.of(_context).orientation == Orientation.portrait
+                  ? 2
+                  : 3,
           mainAxisSpacing: 0.0,
           crossAxisSpacing: 0.0,
           childAspectRatio: 1.0,
@@ -161,12 +166,13 @@ class HomePage extends StatelessWidget {
                     topLeft: new Radius.circular(15.0),
                     topRight: new Radius.circular(15.0))),
             child: Column(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 header(),
                 Expanded(
                   child: ListView.builder(
-                    shrinkWrap: true,
+                    shrinkWrap: false,
                     itemCount: menu.items.length,
                     itemBuilder: (context, i) => Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -329,6 +335,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    _context = context;
     deviceSize = MediaQuery.of(context).size;
     return defaultTargetPlatform == TargetPlatform.iOS
         ? homeIOS(context)

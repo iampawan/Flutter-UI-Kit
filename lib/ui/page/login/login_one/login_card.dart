@@ -33,6 +33,7 @@ class _LoginCardState extends State<LoginCard>
                 child: SingleChildScrollView(
                   child: new Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
                       new TextField(
                         onChanged: (phone) => phoneNumber = phone,

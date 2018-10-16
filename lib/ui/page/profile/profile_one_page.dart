@@ -20,36 +20,39 @@ class ProfileOnePage extends StatelessWidget {
                   title: "Pawan Kumar",
                   subtitle: "Developer",
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    IconButton(
-                      icon: Icon(Icons.chat),
-                      color: Colors.black,
-                      onPressed: () {},
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            new BorderRadius.all(new Radius.circular(50.0)),
-                        border: new Border.all(
-                          color: Colors.black,
-                          width: 4.0,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      IconButton(
+                        icon: Icon(Icons.chat),
+                        color: Colors.black,
+                        onPressed: () {},
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius:
+                              new BorderRadius.all(new Radius.circular(40.0)),
+                          border: new Border.all(
+                            color: Colors.black,
+                            width: 2.0,
+                          ),
+                        ),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              "https://avatars0.githubusercontent.com/u/12619420?s=460&v=4"),
+                          foregroundColor: Colors.black,
+                          radius: 30.0,
                         ),
                       ),
-                      child: CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            "https://avatars0.githubusercontent.com/u/12619420?s=460&v=4"),
-                        foregroundColor: Colors.black,
-                        radius: 40.0,
+                      IconButton(
+                        icon: Icon(Icons.call),
+                        color: Colors.black,
+                        onPressed: () {},
                       ),
-                    ),
-                    IconButton(
-                      icon: Icon(Icons.call),
-                      color: Colors.black,
-                      onPressed: () {},
-                    ),
-                  ],
+                    ],
+                  ),
                 )
               ],
             ),
@@ -77,6 +80,7 @@ class ProfileOnePage extends StatelessWidget {
       );
   //column4
   Widget accountColumn() => FittedBox(
+        fit: BoxFit.fill,
         child: Container(
           height: deviceSize.height * 0.3,
           child: Row(
@@ -84,15 +88,21 @@ class ProfileOnePage extends StatelessWidget {
             children: <Widget>[
               FittedBox(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     ProfileTile(
                       title: "Website",
                       subtitle: "about.me/imthepk",
                     ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
                     ProfileTile(
                       title: "Phone",
                       subtitle: "+919876543210",
+                    ),
+                    SizedBox(
+                      height: 10.0,
                     ),
                     ProfileTile(
                       title: "YouTube",
@@ -102,16 +112,23 @@ class ProfileOnePage extends StatelessWidget {
                 ),
               ),
               FittedBox(
+                fit: BoxFit.cover,
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     ProfileTile(
                       title: "Location",
                       subtitle: "New Delhi",
                     ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
                     ProfileTile(
                       title: "Email",
                       subtitle: "mtechviral@gmail.com",
+                    ),
+                    SizedBox(
+                      height: 10.0,
                     ),
                     ProfileTile(
                       title: "Facebook",
