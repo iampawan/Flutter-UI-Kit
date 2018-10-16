@@ -29,7 +29,8 @@ class CommonScaffold extends StatelessWidget {
       this.floatingIcon,
       this.elevation = 4.0});
 
-  Widget myBottomBar() => new BottomAppBar(
+  Widget myBottomBar() => BottomAppBar(
+        clipBehavior: Clip.antiAlias,
         shape: CircularNotchedRectangle(),
         child: Ink(
           height: 50.0,
