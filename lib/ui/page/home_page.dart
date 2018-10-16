@@ -154,6 +154,7 @@ class HomePage extends StatelessWidget {
     showModalBottomSheet(
         context: context,
         builder: (context) => Material(
+            clipBehavior: Clip.antiAlias,
             color: Colors.white,
             shape: RoundedRectangleBorder(
                 borderRadius: new BorderRadius.only(
