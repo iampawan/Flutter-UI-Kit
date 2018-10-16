@@ -87,17 +87,6 @@ class PaymentSuccessPageState extends State<PaymentSuccessPage> {
                   textColor: Colors.purple,
                   subtitle: "Your transaction was successful",
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  mainAxisSize: MainAxisSize.min,
-                  children: List
-                      .generate(50, (i) => "-")
-                      .map((o) => Text(
-                            o,
-                            maxLines: 1,
-                          ))
-                      .toList(),
-                ),
                 ListTile(
                   title: Text("Date"),
                   subtitle: Text("26 June 2018"),
