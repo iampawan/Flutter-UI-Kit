@@ -52,38 +52,6 @@ Happy learning. :+1:
 
 ## Building the project
 
-### Missing Key.Properties file
-
-If you try to build the project straight away, you'll get an error complaining that a `key.properties` file is missing and Exit code 1 from: /Flutter-UI-Kit-master/android/gradlew app:properties:. To resolve that,
-
-1.  Open r\Flutter-UI-Kit-master\android\app\build.gradle file and comment following lines-
-
-```
-//keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-
-signingConfigs {
-// release {
-// keyAlias keystoreProperties['keyAlias']
-// keyPassword keystoreProperties['keyPassword']
-// storeFile file(keystoreProperties['storeFile'])
-// storePassword keystoreProperties['storePassword']
-// }
-}
-buildTypes {
-// release {
-// signingConfig signingConfigs.release
-// }
-}
-```
-
-2.  Open r\Flutter-UI-Kit-master\android\local.properties and add -
-
-```
-flutter.versionName=1.0.0
-flutter.versionCode=1
-flutter.buildMode=release
-```
-
 ### The stack & building from source
 
 The project is currently built using the latest Flutter Master, with Dart 2 enabled.
