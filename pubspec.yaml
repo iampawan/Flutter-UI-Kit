@@ -17,6 +17,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2  
   font_awesome_flutter:
+  http:
   rxdart:
   flutter_masked_text:
   flutter_localizations:
