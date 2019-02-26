@@ -172,7 +172,8 @@ class TimelineTwoPageState extends State<TimelineTwoPage> {
       floatingActionButton: StreamBuilder<bool>(
         stream: postBloc.fabVisible,
         initialData: true,
-        builder: (context, snapshot) => Opacity(
+        builder: (context, snapshot) => AnimatedOpacity(
+              duration: Duration(milliseconds: 200),
               opacity: snapshot.data ? 1.0 : 0.0,
               child: FloatingActionButton(
                 onPressed: () {},
