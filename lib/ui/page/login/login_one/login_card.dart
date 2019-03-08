@@ -8,7 +8,7 @@ import 'package:flutter_uikit/model/fetch_process.dart';
 import 'package:flutter_uikit/ui/page/login/login_page.dart';
 import 'package:flutter_uikit/ui/widgets/api_subscription.dart';
 import 'package:flutter_uikit/ui/widgets/gradient_button.dart';
-import 'package:flutter_uikit/utils/uidata.dart';
+import 'package:flutter_uikit/utils/translations.dart';
 
 class LoginCard extends StatefulWidget {
   @override
@@ -30,63 +30,74 @@ class _LoginCardState extends State<LoginCard>
         builder: (context, snapshot) => Form(
               child: Padding(
                 padding: const EdgeInsets.all(18.0),
-                child: new Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    new TextField(
-                      onChanged: (phone) => phoneNumber = phone,
-                      enabled: !snapshot.data,
-                      style: new TextStyle(fontSize: 15.0, color: Colors.black),
-                      decoration: new InputDecoration(
-                          hintText: UIData.enter_code_hint,
-                          labelText: UIData.enter_code_label,
-                          labelStyle: TextStyle(fontWeight: FontWeight.w700)),
-                    ),
-                    new SizedBox(
-                      height: 10.0,
-                    ),
-                    snapshot.data == false
-                        ? new Offstage()
-                        : new TextField(
-                            onChanged: (myotp) => otp = myotp,
-                            keyboardType: TextInputType.number,
-                            style: new TextStyle(
-                                fontSize: 15.0, color: Colors.black),
-                            decoration: new InputDecoration(
-                                hintText: UIData.enter_otp_hint,
-                                labelText: UIData.enter_otp_label,
-                                labelStyle:
-                                    TextStyle(fontWeight: FontWeight.w700)),
-                            obscureText: true,
-                          ),
-                    new SizedBox(
-                      height: 30.0,
-                    ),
-                    Container(
-                      child: snapshot.data == false
-                          ? new GradientButton(
-                              onPressed: () => phoneNumber?.length == 10
-                                  ? loginBloc.otpSink.add(UserLoginViewModel(
-                                      phonenumber: phoneNumber))
-                                  : showPhoneError(context),
-                              text: UIData.get_otp)
-                          : new GradientButton(
-                              onPressed: () {
-                                otp?.length == 4
-                                    ? loginBloc.loginSink.add(
-                                        new UserLoginViewModel.withOTP(
-                                            phonenumber: phoneNumber, otp: otp))
-                                    : showOTPError(context);
-                              },
-                              text: UIData.login),
-                    ),
-                    snapshot.data == true
-                        ? new FlatButton(
-                            child: Text(UIData.resend_otp),
-                            onPressed: () => loginBloc.resendOtpSink.add(true),
-                          )
-                        : new Container()
-                  ],
+                child: SingleChildScrollView(
+                  child: new Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      new TextField(
+                        onChanged: (phone) => phoneNumber = phone,
+                        enabled: !snapshot.data,
+                        style:
+                            new TextStyle(fontSize: 15.0, color: Colors.black),
+                        decoration: new InputDecoration(
+                            hintText: Translations.of(context)
+                                .text("enter_code_hint"),
+                            labelText: Translations.of(context)
+                                .text("enter_code_label"),
+                            labelStyle: TextStyle(fontWeight: FontWeight.w700)),
+                      ),
+                      new SizedBox(
+                        height: 10.0,
+                      ),
+                      snapshot.data == false
+                          ? new Offstage()
+                          : new TextField(
+                              onChanged: (myotp) => otp = myotp,
+                              keyboardType: TextInputType.number,
+                              style: new TextStyle(
+                                  fontSize: 15.0, color: Colors.black),
+                              decoration: new InputDecoration(
+                                  hintText: Translations.of(context)
+                                      .text("enter_otp_hint"),
+                                  labelText: Translations.of(context)
+                                      .text("enter_otp_label"),
+                                  labelStyle:
+                                      TextStyle(fontWeight: FontWeight.w700)),
+                              obscureText: true,
+                            ),
+                      new SizedBox(
+                        height: 30.0,
+                      ),
+                      Container(
+                        child: snapshot.data == false
+                            ? new GradientButton(
+                                onPressed: () => phoneNumber?.length == 10
+                                    ? loginBloc.otpSink.add(UserLoginViewModel(
+                                        phonenumber: phoneNumber))
+                                    : showPhoneError(context),
+                                text: Translations.of(context).text("get_otp"))
+                            : new GradientButton(
+                                onPressed: () {
+                                  otp?.length == 4
+                                      ? loginBloc.loginSink.add(
+                                          new UserLoginViewModel.withOTP(
+                                              phonenumber: phoneNumber,
+                                              otp: otp))
+                                      : showOTPError(context);
+                                },
+                                text: Translations.of(context).text("login")),
+                      ),
+                      snapshot.data == true
+                          ? new FlatButton(
+                              child: Text(
+                                  Translations.of(context).text("resend_otp")),
+                              onPressed: () =>
+                                  loginBloc.resendOtpSink.add(true),
+                            )
+                          : new Container()
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -127,8 +138,7 @@ class _LoginCardState extends State<LoginCard>
   }
 
   showPhoneError(BuildContext context) {
-    LoginProvider
-        .of(context)
+    LoginProvider.of(context)
         .validationErrorCallback(LoginValidationType.phone);
   }
 

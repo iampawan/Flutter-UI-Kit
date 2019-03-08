@@ -49,24 +49,26 @@ class PaymentSuccessPageState extends State<PaymentSuccessPage> {
         context: context,
         barrierDismissible: true,
         builder: (context) => Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  successTicket(),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  FloatingActionButton(
-                    backgroundColor: Colors.black,
-                    child: Icon(
-                      Icons.clear,
-                      color: Colors.white,
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    successTicket(),
+                    SizedBox(
+                      height: 10.0,
                     ),
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                  )
-                ],
+                    FloatingActionButton(
+                      backgroundColor: Colors.black,
+                      child: Icon(
+                        Icons.clear,
+                        color: Colors.white,
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                    )
+                  ],
+                ),
               ),
             ));
   }
@@ -75,6 +77,7 @@ class PaymentSuccessPageState extends State<PaymentSuccessPage> {
         width: double.infinity,
         padding: const EdgeInsets.all(16.0),
         child: Material(
+          clipBehavior: Clip.antiAlias,
           elevation: 2.0,
           borderRadius: BorderRadius.circular(4.0),
           child: Padding(
@@ -86,17 +89,6 @@ class PaymentSuccessPageState extends State<PaymentSuccessPage> {
                   title: "Thank You!",
                   textColor: Colors.purple,
                   subtitle: "Your transaction was successful",
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  mainAxisSize: MainAxisSize.min,
-                  children: List
-                      .generate(50, (i) => "-")
-                      .map((o) => Text(
-                            o,
-                            maxLines: 1,
-                          ))
-                      .toList(),
                 ),
                 ListTile(
                   title: Text("Date"),
@@ -118,6 +110,7 @@ class PaymentSuccessPageState extends State<PaymentSuccessPage> {
                   trailing: Text("Completed"),
                 ),
                 Card(
+                  clipBehavior: Clip.antiAlias,
                   elevation: 0.0,
                   color: Colors.grey.shade300,
                   child: ListTile(

@@ -1,0 +1,12 @@
+{
+  "app_name":"फ़्लटर यूआई-किट ",
+  "enter_code_label":"फ़ोन नम्बर",
+  "enter_code_hint":"10 डिजिट का फ़ोन नम्बर ",
+  "enter_otp_label":"ओ टी पी",
+  "enter_otp_hint":"4 डिजिट ओ टी पी",
+  "get_otp":"ओ टी पी मँगायें ",
+  "resend_otp":"ओ टी पी दुबारा मँगायें",
+  "login":"लॉगिन",
+  "enter_valid_number":"10 डिजिट का ही नम्बर डालें",
+  "enter_valid_otp":"4 डिजिट का ही ओ टी पी डालें"
+}

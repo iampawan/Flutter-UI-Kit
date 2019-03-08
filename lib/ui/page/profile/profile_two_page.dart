@@ -12,29 +12,32 @@ class ProfileTwoPage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Card(
+            clipBehavior: Clip.antiAlias,
             color: Colors.black,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50.0),
-                      border: Border.all(width: 2.0, color: Colors.white)),
-                  child: CircleAvatar(
-                    radius: 40.0,
-                    backgroundImage: NetworkImage(
-                        "https://avatars0.githubusercontent.com/u/12619420?s=460&v=4"),
+            child: FittedBox(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.0),
+                        border: Border.all(width: 2.0, color: Colors.white)),
+                    child: CircleAvatar(
+                      radius: 40.0,
+                      backgroundImage: NetworkImage(
+                          "https://avatars0.githubusercontent.com/u/12619420?s=460&v=4"),
+                    ),
                   ),
-                ),
-                Text(
-                  "Pawan Kumar",
-                  style: TextStyle(color: Colors.white, fontSize: 20.0),
-                ),
-                Text(
-                  "Flutter Developer",
-                  style: TextStyle(color: Colors.white),
-                )
-              ],
+                  Text(
+                    "Pawan Kumar",
+                    style: TextStyle(color: Colors.white, fontSize: 20.0),
+                  ),
+                  Text(
+                    "Flutter Developer",
+                    style: TextStyle(color: Colors.white),
+                  )
+                ],
+              ),
             ),
           ),
         ),

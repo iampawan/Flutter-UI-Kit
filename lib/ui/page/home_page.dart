@@ -1,21 +1,23 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_uikit/logic/bloc/menu_bloc.dart';
 import 'package:flutter_uikit/model/menu.dart';
 import 'package:flutter_uikit/ui/widgets/about_tile.dart';
 import 'package:flutter_uikit/ui/widgets/profile_tile.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
-import 'package:flutter/foundation.dart';
 
 class HomePage extends StatelessWidget {
   final _scaffoldState = GlobalKey<ScaffoldState>();
   Size deviceSize;
+  BuildContext _context;
   //menuStack
   Widget menuStack(BuildContext context, Menu menu) => InkWell(
         onTap: () => _showModalBottomSheet(context, menu),
         splashColor: Colors.orange,
         child: Card(
-          elevation: 5.0,
+          clipBehavior: Clip.antiAlias,
+          elevation: 2.0,
           child: Stack(
             fit: StackFit.expand,
             children: <Widget>[
@@ -28,12 +30,9 @@ class HomePage extends StatelessWidget {
       );
 
   //stack 1/3
-  Widget menuImage(Menu menu) => AspectRatio(
-        aspectRatio: 1.0,
-        child: Image.asset(
-          menu.image,
-          fit: BoxFit.cover,
-        ),
+  Widget menuImage(Menu menu) => Image.asset(
+        menu.image,
+        fit: BoxFit.cover,
       );
 
   //stack 2/3
@@ -95,7 +94,10 @@ class HomePage extends StatelessWidget {
   //bodygrid
   Widget bodyGrid(List<Menu> menu) => SliverGrid(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
+          crossAxisCount:
+              MediaQuery.of(_context).orientation == Orientation.portrait
+                  ? 2
+                  : 3,
           mainAxisSpacing: 0.0,
           crossAxisSpacing: 0.0,
           childAspectRatio: 1.0,
@@ -107,8 +109,8 @@ class HomePage extends StatelessWidget {
 
   Widget homeScaffold(BuildContext context) => Theme(
         data: Theme.of(context).copyWith(
-              canvasColor: Colors.transparent,
-            ),
+          canvasColor: Colors.transparent,
+        ),
         child: Scaffold(key: _scaffoldState, body: bodySliverList()),
       );
 
@@ -157,18 +159,20 @@ class HomePage extends StatelessWidget {
     showModalBottomSheet(
         context: context,
         builder: (context) => Material(
+            clipBehavior: Clip.antiAlias,
             color: Colors.white,
             shape: RoundedRectangleBorder(
                 borderRadius: new BorderRadius.only(
                     topLeft: new Radius.circular(15.0),
                     topRight: new Radius.circular(15.0))),
             child: Column(
-              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 header(),
                 Expanded(
                   child: ListView.builder(
-                    shrinkWrap: true,
+                    shrinkWrap: false,
                     itemCount: menu.items.length,
                     itemBuilder: (context, i) => Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -236,10 +240,13 @@ class HomePage extends StatelessWidget {
   Widget menuIOS(Menu menu, BuildContext context) {
     return Container(
       height: deviceSize.height / 2,
-      child: Card(
-        elevation: 0.0,
+      decoration: ShapeDecoration(
         shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(14.0)),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+      ),
+      child: Card(
+        clipBehavior: Clip.antiAlias,
+        elevation: 3.0,
         margin: EdgeInsets.all(16.0),
         child: Stack(
           fit: StackFit.expand,
@@ -328,6 +335,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    _context = context;
     deviceSize = MediaQuery.of(context).size;
     return defaultTargetPlatform == TargetPlatform.iOS
         ? homeIOS(context)
