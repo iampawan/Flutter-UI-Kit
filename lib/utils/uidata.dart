@@ -75,8 +75,8 @@ class UIData {
     Colors.black87,
   ];
   static List<Color> kitGradients2 = [
-    Color(0xffb7ac50),
-    Colors.orange.shade900
+    Colors.cyan.shade600,
+    Colors.blue.shade900
   ];
 
   //randomcolor

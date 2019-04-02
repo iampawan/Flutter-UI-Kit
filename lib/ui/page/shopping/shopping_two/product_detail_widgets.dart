@@ -53,6 +53,7 @@ class ProductDetailWidgets extends StatelessWidget {
         left: deviceSize.width / 2 - deviceSize.width / 5,
         width: deviceSize.width / 2 - 30,
         child: new Material(
+          clipBehavior: Clip.antiAlias,
           shape: new StadiumBorder(),
           shadowColor: Colors.black,
           elevation: 2.0,

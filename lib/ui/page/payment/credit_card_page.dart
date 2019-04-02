@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'package:flutter_uikit/logic/bloc/credit_card_bloc.dart';
 import 'package:flutter_uikit/ui/widgets/profile_tile.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter_masked_text/flutter_masked_text.dart';
 
 class CreditCardPage extends StatelessWidget {
   BuildContext _context;
@@ -25,6 +25,7 @@ class CreditCardPage extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Card(
+          clipBehavior: Clip.antiAlias,
           elevation: 3.0,
           child: Stack(
             fit: StackFit.expand,
@@ -40,7 +41,35 @@ class CreditCardPage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              cardEntries(),
+              MediaQuery.of(_context).orientation == Orientation.portrait
+                  ? cardEntries()
+                  : FittedBox(
+                      child: cardEntries(),
+                    ),
+              Positioned(
+                right: 10.0,
+                top: 10.0,
+                child: Icon(
+                  FontAwesomeIcons.ccVisa,
+                  size: 30.0,
+                  color: Colors.white,
+                ),
+              ),
+              Positioned(
+                right: 10.0,
+                bottom: 10.0,
+                child: StreamBuilder<String>(
+                  stream: cardBloc.nameOutputStream,
+                  initialData: "Your Name",
+                  builder: (context, snapshot) => Text(
+                        snapshot.data.length > 0 ? snapshot.data : "Your Name",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: UIData.ralewayFont,
+                            fontSize: 20.0),
+                      ),
+                ),
+              ),
             ],
           ),
         ),
@@ -51,17 +80,9 @@ class CreditCardPage extends StatelessWidget {
   Widget cardEntries() => Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Align(
-              alignment: Alignment.topRight,
-              child: Icon(
-                FontAwesomeIcons.ccVisa,
-                size: 40.0,
-                color: Colors.white,
-              ),
-            ),
             StreamBuilder<String>(
                 stream: cardBloc.ccOutputStream,
                 initialData: "**** **** **** ****",
@@ -73,12 +94,9 @@ class CreditCardPage extends StatelessWidget {
                     snapshot.data.length > 0
                         ? snapshot.data
                         : "**** **** **** ****",
-                    style: TextStyle(color: Colors.white, fontSize: 25.0),
+                    style: TextStyle(color: Colors.white, fontSize: 22.0),
                   );
                 }),
-            SizedBox(
-              height: 20.0,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
@@ -109,22 +127,6 @@ class CreditCardPage extends StatelessWidget {
                               snapshot.data.length > 0 ? snapshot.data : "***",
                         )),
               ],
-            ),
-            Expanded(
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: StreamBuilder<String>(
-                  stream: cardBloc.nameOutputStream,
-                  initialData: "Your Name",
-                  builder: (context, snapshot) => Text(
-                        snapshot.data.length > 0 ? snapshot.data : "Your Name",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontFamily: UIData.ralewayFont,
-                            fontSize: 20.0),
-                      ),
-                ),
-              ),
             ),
           ],
         ),
@@ -189,23 +191,20 @@ class CreditCardPage extends StatelessWidget {
         ),
       );
 
-  Widget floatingBar() => Material(
-        shape: StadiumBorder(),
-        elevation: 3.0,
-        child: Ink(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(colors: UIData.kitGradients)),
-          child: FloatingActionButton.extended(
-            onPressed: () {},
-            backgroundColor: Colors.transparent,
-            icon: Icon(
-              FontAwesomeIcons.amazonPay,
-              color: Colors.white,
-            ),
-            label: Text(
-              "Continue",
-              style: TextStyle(color: Colors.white),
-            ),
+  Widget floatingBar() => Ink(
+        decoration: ShapeDecoration(
+            shape: StadiumBorder(),
+            gradient: LinearGradient(colors: UIData.kitGradients)),
+        child: FloatingActionButton.extended(
+          onPressed: () {},
+          backgroundColor: Colors.transparent,
+          icon: Icon(
+            FontAwesomeIcons.amazonPay,
+            color: Colors.white,
+          ),
+          label: Text(
+            "Continue",
+            style: TextStyle(color: Colors.white),
           ),
         ),
       );

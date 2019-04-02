@@ -5,6 +5,7 @@ import 'package:flutter_uikit/ui/widgets/common_scaffold.dart';
 
 class ShoppingOnePage extends StatelessWidget {
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  BuildContext _context;
 
   //stack1
   Widget imageStack(String img) => Image.network(
@@ -74,7 +75,8 @@ class ShoppingOnePage extends StatelessWidget {
       );
 
   Widget productGrid(List<Product> products) => GridView.count(
-        crossAxisCount: 2,
+        crossAxisCount:
+            MediaQuery.of(_context).orientation == Orientation.portrait ? 2 : 3,
         shrinkWrap: true,
         children: products
             .map((product) => Padding(
@@ -83,6 +85,7 @@ class ShoppingOnePage extends StatelessWidget {
                     splashColor: Colors.yellow,
                     onDoubleTap: () => showSnackBar(),
                     child: Material(
+                      clipBehavior: Clip.antiAlias,
                       elevation: 2.0,
                       child: Stack(
                         fit: StackFit.expand,
@@ -123,6 +126,7 @@ class ShoppingOnePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    _context = context;
     return CommonScaffold(
       scaffoldKey: scaffoldKey,
       appTitle: "Products",
