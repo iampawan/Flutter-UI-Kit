@@ -10,3 +10,5 @@ build/
 
 .properties
 key.properties
+.idea
+.vscode
