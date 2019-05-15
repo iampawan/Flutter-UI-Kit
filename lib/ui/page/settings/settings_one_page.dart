@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 import 'package:flutter_uikit/ui/widgets/common_scaffold.dart';
 import 'package:flutter_uikit/ui/widgets/common_switch.dart';
 import 'package:flutter_uikit/utils/uidata.dart';

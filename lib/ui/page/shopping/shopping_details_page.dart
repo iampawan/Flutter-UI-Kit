@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 import 'package:flutter_uikit/inherited/product_provider.dart';
 import 'package:flutter_uikit/logic/bloc/product_bloc.dart';
 import 'package:flutter_uikit/model/product.dart';

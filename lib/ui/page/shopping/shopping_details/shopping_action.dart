@@ -1,9 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 import 'package:flutter_uikit/logic/bloc/cart_bloc.dart';
 import 'package:flutter_uikit/model/product.dart';
 import 'package:flutter_uikit/ui/widgets/common_divider.dart';
 import 'package:flutter_uikit/ui/widgets/custom_float.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ShoppingAction extends StatefulWidget {
   final Product product;
@@ -102,7 +101,7 @@ class ShoppingActionState extends State<ShoppingAction> {
           children: <Widget>[
             CustomFloat(
               isMini: true,
-              icon: FontAwesomeIcons.minus,
+              icon: Icons.remove,
               qrCallback: () => cartBloc.subtractionController.add(true),
             ),
             StreamBuilder<int>(
@@ -116,7 +115,7 @@ class ShoppingActionState extends State<ShoppingAction> {
             ),
             CustomFloat(
               isMini: true,
-              icon: FontAwesomeIcons.plus,
+              icon: Icons.add,
               qrCallback: () => cartBloc.additionalController.add(true),
             ),
           ],

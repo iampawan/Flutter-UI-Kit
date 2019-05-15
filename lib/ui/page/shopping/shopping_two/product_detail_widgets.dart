@@ -1,5 +1,5 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_web/foundation.dart';
+import 'package:flutter_web/material.dart';
 import 'package:flutter_uikit/logic/bloc/cart_bloc.dart';
 import 'package:flutter_uikit/model/product.dart';
 import 'package:flutter_uikit/ui/page/shopping/shopping_two/product_card.dart';

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 import 'package:flutter_uikit/logic/bloc/product_bloc.dart';
 
 class ProductProvider extends InheritedWidget {

@@ -1,0 +1,18 @@
+[
+  {
+    "family": "MaterialIcons",
+    "fonts": [
+      {
+        "asset": "https://fonts.gstatic.com/s/materialicons/v42/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2"
+      }
+    ]
+  },
+  {
+    "family": "FontAwesomeIcons",
+    "fonts": [
+      {
+        "asset": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/webfonts/fa-regular-400.woff2"
+      }
+    ]
+  }
+]

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 import 'package:flutter_uikit/ui/page/profile/profile_one_page.dart';
 import 'package:flutter_uikit/ui/widgets/common_scaffold.dart';
 

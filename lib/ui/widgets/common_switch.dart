@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter_web/foundation.dart';
+import 'package:flutter_web/material.dart';
+import 'package:flutter_web/cupertino.dart';
 
 class CommonSwitch extends StatelessWidget {
   final defValue;
@@ -12,9 +12,9 @@ class CommonSwitch extends StatelessWidget {
             value: defValue,
             onChanged: (val) {},
           )
-        : CupertinoSwitch(
-            value: defValue,
-            onChanged: (val) {},
-          );
+        : Switch(
+      value: defValue,
+      onChanged: (val) {},
+    );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 import 'package:flutter_uikit/services/network_service_response.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
 

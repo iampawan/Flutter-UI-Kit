@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 
 class LoginProvider extends InheritedWidget {
   final Function validationErrorCallback;

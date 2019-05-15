@@ -1,9 +1,8 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
+import 'package:flutter_web/material.dart';
 import 'package:flutter_uikit/ui/widgets/common_scaffold.dart';
 import 'package:flutter_uikit/ui/widgets/profile_tile.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PaymentSuccessPage extends StatefulWidget {
   @override
@@ -115,7 +114,7 @@ class PaymentSuccessPageState extends State<PaymentSuccessPage> {
                   color: Colors.grey.shade300,
                   child: ListTile(
                     leading: Icon(
-                      FontAwesomeIcons.ccAmex,
+                      Icons.credit_card,
                       color: Colors.blue,
                     ),
                     title: Text("Credit/Debit Card"),
