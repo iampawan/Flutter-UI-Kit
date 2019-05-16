@@ -1,10 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+import 'package:flutter_web/material.dart';
+import 'package:flutter_web/rendering.dart';
 import 'package:flutter_uikit/logic/bloc/post_bloc.dart';
 import 'package:flutter_uikit/model/post.dart';
 import 'package:flutter_uikit/ui/widgets/common_drawer.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TimelineTwoPage extends StatefulWidget {
   @override
@@ -33,22 +32,22 @@ class TimelineTwoPageState extends State<TimelineTwoPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Icon(
-              FontAwesomeIcons.comment,
+              Icons.comment,
               size: 15.0,
               color: Colors.grey,
             ),
             Icon(
-              FontAwesomeIcons.retweet,
+              Icons.message,
               size: 15.0,
               color: Colors.grey,
             ),
             Icon(
-              FontAwesomeIcons.heart,
+              Icons.brightness_1,
               size: 15.0,
               color: Colors.grey,
             ),
             Icon(
-              FontAwesomeIcons.share,
+              Icons.share,
               size: 15.0,
               color: Colors.grey,
             )

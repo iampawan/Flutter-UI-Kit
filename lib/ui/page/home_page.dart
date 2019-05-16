@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_web/cupertino.dart';
+import 'package:flutter_web/foundation.dart';
+import 'package:flutter_web/material.dart';
 import 'package:flutter_uikit/logic/bloc/menu_bloc.dart';
 import 'package:flutter_uikit/model/menu.dart';
 import 'package:flutter_uikit/ui/widgets/about_tile.dart';

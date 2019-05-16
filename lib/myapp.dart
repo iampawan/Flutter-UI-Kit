@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_web/material.dart';
 import 'package:flutter_uikit/ui/page/dashboard/dashboard_one.page.dart';
 import 'package:flutter_uikit/ui/page/dashboard/dashboard_two_page.dart';
 import 'package:flutter_uikit/ui/page/home_page.dart';
@@ -16,9 +15,7 @@ import 'package:flutter_uikit/ui/page/shopping/shopping_details_page.dart';
 import 'package:flutter_uikit/ui/page/shopping/shopping_one_page.dart';
 import 'package:flutter_uikit/ui/page/timeline/timeline_one_page.dart';
 import 'package:flutter_uikit/ui/page/timeline/timeline_two_page.dart';
-import 'package:flutter_uikit/utils/translations.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyApp extends StatelessWidget {
   final materialApp = MaterialApp(
@@ -30,15 +27,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       showPerformanceOverlay: false,
       home: HomePage(),
-      localizationsDelegates: [
-        const TranslationsDelegate(),
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      supportedLocales: [
-        const Locale("en", "US"),
-        const Locale("hi", "IN"),
-      ],
+      // localizationsDelegates: [
+      //   const TranslationsDelegate(),
+      //   GlobalMaterialLocalizations.delegate,
+      //   GlobalWidgetsLocalizations.delegate,
+      // ],
+//      supportedLocales: [
+//        const Locale("en", "US"),
+//        const Locale("hi", "IN"),
+//      ],
       // initialRoute: UIData.notFoundRoute,
 
       //routes
@@ -65,7 +62,7 @@ class MyApp extends StatelessWidget {
       onUnknownRoute: (RouteSettings rs) => new MaterialPageRoute(
           builder: (context) => new NotFoundPage(
                 appTitle: UIData.coming_soon,
-                icon: FontAwesomeIcons.solidSmile,
+                icon: Icons.brightness_1,
                 title: UIData.coming_soon,
                 message: "Under Development",
                 iconColor: Colors.green,
