@@ -1,4 +1,4 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_uikit/ui/widgets/common_drawer.dart';
 import 'package:flutter_uikit/ui/widgets/custom_float.dart';
 import 'package:flutter_uikit/utils/uidata.dart';

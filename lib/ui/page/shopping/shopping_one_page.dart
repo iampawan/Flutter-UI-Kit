@@ -1,4 +1,4 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_uikit/logic/bloc/product_bloc.dart';
 import 'package:flutter_uikit/model/product.dart';
 import 'package:flutter_uikit/ui/widgets/common_scaffold.dart';

@@ -1,13 +1,16 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'package:flutter_uikit/logic/bloc/credit_card_bloc.dart';
 import 'package:flutter_uikit/ui/widgets/profile_tile.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CreditCardPage extends StatelessWidget {
   BuildContext _context;
   CreditCardBloc cardBloc;
-  TextEditingController ccMask = TextEditingController();
-  TextEditingController expMask = TextEditingController();
+  MaskedTextController ccMask =
+      MaskedTextController(mask: "0000 0000 0000 0000");
+  MaskedTextController expMask = MaskedTextController(mask: "00/00");
   Widget bodyData() => SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -47,7 +50,7 @@ class CreditCardPage extends StatelessWidget {
                 right: 10.0,
                 top: 10.0,
                 child: Icon(
-                  Icons.credit_card,
+                  FontAwesomeIcons.ccVisa,
                   size: 30.0,
                   color: Colors.white,
                 ),
@@ -84,7 +87,9 @@ class CreditCardPage extends StatelessWidget {
                 stream: cardBloc.ccOutputStream,
                 initialData: "**** **** **** ****",
                 builder: (context, snapshot) {
-                  snapshot.data.length > 0 ? ccMask.text = snapshot.data : null;
+                  snapshot.data.length > 0
+                      ? ccMask.updateText(snapshot.data)
+                      : null;
                   return Text(
                     snapshot.data.length > 0
                         ? snapshot.data
@@ -100,7 +105,7 @@ class CreditCardPage extends StatelessWidget {
                     initialData: "MM/YY",
                     builder: (context, snapshot) {
                       snapshot.data.length > 0
-                          ? expMask.text = snapshot.data
+                          ? expMask.updateText(snapshot.data)
                           : null;
                       return ProfileTile(
                         textColor: Colors.white,
@@ -194,7 +199,7 @@ class CreditCardPage extends StatelessWidget {
           onPressed: () {},
           backgroundColor: Colors.transparent,
           icon: Icon(
-            Icons.credit_card,
+            FontAwesomeIcons.amazonPay,
             color: Colors.white,
           ),
           label: Text(

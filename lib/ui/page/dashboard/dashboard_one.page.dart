@@ -1,9 +1,10 @@
-import 'package:flutter_web/foundation.dart';
-import 'package:flutter_web/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_uikit/ui/page/dashboard/dashboard_one/dashboard_menu_row.dart';
 import 'package:flutter_uikit/ui/widgets/login_background.dart';
 import 'package:flutter_uikit/ui/widgets/profile_tile.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DashboardOnePage extends StatelessWidget {
   Size deviceSize;
@@ -84,44 +85,44 @@ class DashboardOnePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   DashboardMenuRow(
-                    firstIcon: Icons.brightness_1,
+                    firstIcon: FontAwesomeIcons.solidUser,
                     firstLabel: "Friends",
                     firstIconCircleColor: Colors.blue,
-                    secondIcon: Icons.brightness_1,
+                    secondIcon: FontAwesomeIcons.userFriends,
                     secondLabel: "Groups",
                     secondIconCircleColor: Colors.orange,
-                    thirdIcon: Icons.brightness_1,
+                    thirdIcon: FontAwesomeIcons.mapMarkerAlt,
                     thirdLabel: "Nearby",
                     thirdIconCircleColor: Colors.purple,
-                    fourthIcon: Icons.brightness_1,
+                    fourthIcon: FontAwesomeIcons.locationArrow,
                     fourthLabel: "Moment",
                     fourthIconCircleColor: Colors.indigo,
                   ),
                   DashboardMenuRow(
-                    firstIcon: Icons.brightness_1,
+                    firstIcon: FontAwesomeIcons.images,
                     firstLabel: "Albums",
                     firstIconCircleColor: Colors.red,
-                    secondIcon: Icons.brightness_1,
+                    secondIcon: FontAwesomeIcons.solidHeart,
                     secondLabel: "Likes",
                     secondIconCircleColor: Colors.teal,
-                    thirdIcon: Icons.brightness_1,
+                    thirdIcon: FontAwesomeIcons.solidNewspaper,
                     thirdLabel: "Articles",
                     thirdIconCircleColor: Colors.lime,
-                    fourthIcon: Icons.brightness_1,
+                    fourthIcon: FontAwesomeIcons.solidCommentDots,
                     fourthLabel: "Reviews",
                     fourthIconCircleColor: Colors.amber,
                   ),
                   DashboardMenuRow(
-                    firstIcon: Icons.brightness_1,
+                    firstIcon: FontAwesomeIcons.footballBall,
                     firstLabel: "Sports",
                     firstIconCircleColor: Colors.cyan,
-                    secondIcon: Icons.brightness_1,
+                    secondIcon: FontAwesomeIcons.solidStar,
                     secondLabel: "Fav",
                     secondIconCircleColor: Colors.redAccent,
-                    thirdIcon: Icons.brightness_1,
+                    thirdIcon: FontAwesomeIcons.blogger,
                     thirdLabel: "Blogs",
                     thirdIconCircleColor: Colors.pink,
-                    fourthIcon: Icons.brightness_1,
+                    fourthIcon: FontAwesomeIcons.wallet,
                     fourthLabel: "Wallet",
                     fourthIconCircleColor: Colors.brown,
                   ),

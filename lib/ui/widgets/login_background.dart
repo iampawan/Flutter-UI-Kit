@@ -1,4 +1,4 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_uikit/ui/tools/arc_clipper.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
 
