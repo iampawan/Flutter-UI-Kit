@@ -7,7 +7,7 @@
 The goal of this project is to provide an ultimate collection of real world app's UIs.
 While I built Flutter UIKit for my own needs, it is also intented to showcase good app structure and a clean, well-organized Flutter codebase.
 
-The source code is **100% Dart**, and everything resides in the [/lib](https://github.com/imthepk/Flutter-UI-Kit/tree/development/lib) folder.
+The source code is **100% Dart**, and everything resides in the [/lib](https://github.com/iampawan/Flutter-UI-Kit/tree/master/lib) folder.
 
 This project will try to **showcase only the best, most popular and well-designed templates** that you will actually need and find useful rather than overwhelming you with a plethora of low-quality ones.
 
@@ -15,7 +15,7 @@ Happy learning. :+1:
 
 ### Show some :heart: and star the repo to support the project
 
-[![GitHub stars](https://img.shields.io/github/stars/iampawan/Flutter-UI-Kit.svg?style=social&label=Star)](https://github.com/iampawan/Flutter-UI-Kit) [![GitHub forks](https://img.shields.io/github/forks/iampawan/Flutter-UI-Kit.svg?style=social&label=Fork)](https://github.com/iampawan/Flutter-UI-Kit/fork) [![GitHub watchers](https://img.shields.io/github/watchers/iampawan/Flutter-UI-Kit.svg?style=social&label=Watch)](https://github.com/iampawan/Flutter-UI-Kit) [![GitHub followers](https://img.shields.io/github/followers/iampawan.svg?style=social&label=Follow)](https://github.com/iampawan/Flutter-UI-Kit)  
+[![GitHub stars](https://img.shields.io/github/stars/iampawan/Flutter-UI-Kit.svg?style=social&label=Star)](https://github.com/iampawan/Flutter-UI-Kit) [![GitHub forks](https://img.shields.io/github/forks/iampawan/Flutter-UI-Kit.svg?style=social&label=Fork)](https://github.com/iampawan/Flutter-UI-Kit/fork) [![GitHub watchers](https://img.shields.io/github/watchers/iampawan/Flutter-UI-Kit.svg?style=social&label=Watch)](https://github.com/iampawan/Flutter-UI-Kit) [![GitHub followers](https://img.shields.io/github/followers/iampawan.svg?style=social&label=Follow)](https://github.com/iampawan/Flutter-UI-Kit)
 [![Twitter Follow](https://img.shields.io/twitter/follow/imthepk.svg?style=social)](https://twitter.com/imthepk)
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://opensource.org/licenses/Apache-2.0)
@@ -141,6 +141,6 @@ limitations under the License.
 
 ## Getting Started
 
-For help getting started with Flutter, view our online  
+For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
 ```
