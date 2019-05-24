@@ -1,7 +1,7 @@
 import 'dart:math';
+import 'dart:ui';
 
-import 'package:flutter_web/material.dart';
-import 'package:flutter_web_ui/ui.dart';
+import 'package:flutter/material.dart';
 
 class UIData {
   //routes
@@ -33,7 +33,7 @@ class UIData {
   static const String quickLightFont = "Quicksand_Light.otf";
 
   //images
-  static const String imageDir = "images";
+  static const String imageDir = "assets/images";
   static const String pkImage = "$imageDir/pk.jpg";
   static const String profileImage = "$imageDir/profile.jpg";
   static const String blankImage = "$imageDir/blank.jpg";

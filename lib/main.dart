@@ -1,4 +1,4 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_uikit/di/dependency_injection.dart';
 import 'package:flutter_uikit/myapp.dart';
 

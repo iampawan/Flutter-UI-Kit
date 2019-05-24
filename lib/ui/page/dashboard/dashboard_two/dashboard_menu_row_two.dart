@@ -1,4 +1,4 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_uikit/ui/widgets/label_below_icon.dart';
 
 class DashboardMenuRowTwo extends StatelessWidget {

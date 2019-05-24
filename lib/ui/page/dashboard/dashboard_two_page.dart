@@ -1,6 +1,7 @@
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_uikit/ui/page/dashboard/dashboard_two/dashboard_menu_row_two.dart';
 import 'package:flutter_uikit/ui/widgets/common_scaffold.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DashboardTwoPage extends StatelessWidget {
   Widget bodyData() => SingleChildScrollView(
@@ -22,19 +23,19 @@ class DashboardTwoPage extends StatelessWidget {
                 height: 10.0,
               ),
               DashboardMenuRowTwo(
-                firstIcon: Icons.brightness_1,
+                firstIcon: FontAwesomeIcons.bolt,
                 firstLabel: "ELECTRICITY",
-                secondIcon: Icons.brightness_1,
+                secondIcon: FontAwesomeIcons.tint,
                 secondLabel: "WATER",
-                thirdIcon: Icons.brightness_1,
+                thirdIcon: FontAwesomeIcons.mobile,
                 thirdLabel: "MOBILE",
               ),
               DashboardMenuRowTwo(
                 firstIcon: Icons.phone,
                 firstLabel: "LANDLINE",
-                secondIcon: Icons.brightness_1,
+                secondIcon: FontAwesomeIcons.tv,
                 secondLabel: "CABLE TV",
-                thirdIcon: Icons.brightness_1,
+                thirdIcon: FontAwesomeIcons.chrome,
                 thirdLabel: "INTERNET",
               ),
               SizedBox(
@@ -51,11 +52,11 @@ class DashboardTwoPage extends StatelessWidget {
                 ),
               ),
               DashboardMenuRowTwo(
-                firstIcon: Icons.brightness_1,
+                firstIcon: FontAwesomeIcons.film,
                 firstLabel: "MOVIE",
-                secondIcon: Icons.brightness_1,
+                secondIcon: FontAwesomeIcons.calendarAlt,
                 secondLabel: "EVENT",
-                thirdIcon: Icons.brightness_1,
+                thirdIcon: FontAwesomeIcons.footballBall,
                 thirdLabel: "SPORT",
               ),
             ],

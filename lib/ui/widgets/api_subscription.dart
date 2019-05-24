@@ -1,9 +1,10 @@
 import 'dart:async';
 
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_uikit/model/fetch_process.dart';
 import 'package:flutter_uikit/ui/widgets/common_dialogs.dart';
 import 'package:flutter_uikit/utils/uidata.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 apiSubscription(Stream<FetchProcess> apiResult, BuildContext context) {
   apiResult.listen((FetchProcess p) {
@@ -16,7 +17,7 @@ apiSubscription(Stream<FetchProcess> apiResult, BuildContext context) {
       } else {
         switch (p.type) {
           case ApiType.performLogin:
-            showSuccess(context, UIData.success, Icons.check);
+            showSuccess(context, UIData.success, FontAwesomeIcons.check);
             break;
           case ApiType.getProductInfo:
             break;
